@@ -11,6 +11,7 @@ import './stylesheets/base.scss';
 import _ from 'underscore';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
+import threeExample from './pages/threeExample';
 // import multimediaController from './pages/multimedia';
 
 // on document load
@@ -33,6 +34,8 @@ $(function(){
     console.log('multimedia page started');
   } else if (window.location.pathname === '/pages/d3example.html') {
     d3example.init();
+  } else if (window.location.pathname === '/pages/threeExample.html') {
+    threeExample.init(); 
   }
 
 });
