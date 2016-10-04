@@ -1,69 +1,71 @@
 
 var $ = window.$;
 var Handlebars = window.Handlebars;
-import lscache from 'lscache';
-
-  
-var database = [];  // storage of all data which we'll loop through (MVC design pattern)
-var model = {  // model has no visual display in an MVC
-  init: function(){
-    var savedData = lscache.get('todos');
-    if (savedData) {
-      database = savedData;
-    } else {
-      database = [];
-    }
-  },
-  save: function(){
-    var dataToSave = JSON.stringify(database);  // stringify and parse are opposite - JSON only provides these 2 functions
-    lscache.set('todos', dataToSave);
-  },
-  get: function(){
-    return database;
-  }
-};
-
-
-var view = $('script[type="text/x-template"]').html(); // visual stuff - 'dumb' template
+import model from '../models/todoModel';
+import view from 'text!../views/todoItem.tpl';
     
 var controller = {  // what mediates between the view and the model
   init: function(){  // property called init that stores a function
     model.init();
-    // cache some selectors
+    // cache a jquery selectors
     controller.addButton = $('.btn-add');
-    // start everything up and get it ready
-    controller.compiledTemplate = Handlebars.compile(view); // pass view to handlebars to view/store compiled  
-                                                    // template (handelbars only has two functions: 
-                                                   // takes data object and puts into our compiled template)
-    controller.renderTemplates();  // when controller runs, it renderes the templates
+    // compile todo item template
+
+    /* pass view to handlebars to view/store compiled  
+    template (handelbars only has two functions: 
+    takes data object and puts into our compiled template)*/
+    controller.compiledTemplate = Handlebars.compile(view); 
+    // render the todo item template
+    controller.renderTemplates();  // when controller runs, it renders the templates
   },
+  // do all the visual stuff
   render: function(compiledTodos){  // receive list of compiled templates
-    // do all the visual stuff
+    // remove all the event handlers for the todo app
+    // event handlers are functions that get run when an event happens
     controller.destroyEventHandlers();
+    // compiled todos is an array
+    // we are joining the elements of the array together to make one long string
+    // put the long string into the HTML element with a class called "todo-list"
     $('.todo-list').html(compiledTodos.join(''));
-    controller.createEventHandlers();  // then controller creates event handlers
+    // now that all the todos have been added to the DOM
+    // then controller creates all the event handlers for the todo app
+    controller.createEventHandlers();  
   },
   renderTemplates: function(){
     var compiledTodos = [];
-    
-    model.get().forEach(function(item, index){    // loop that runs once for each item
-      item.id = index + 1;      // provides template with the id (and adds numbering starting with 1)
-      var renderedTodo = controller.compiledTemplate(item);    // passes item to compiled template
+    // model.get - get the database (an array)
+    // then loop that runs once for each item
+    model.get().forEach(function(item, index){
+      // create an id equal to index + 1
+      // the +1 adds numbering starting with 1 to make it more human readable
+      // provides template with the id which is required by our view 
+      item.id = index + 1;
+      // replace {{id}} with the items id value (passes item to compiled template to produce rendered template and data (handlebars))
+      var renderedTodo = controller.compiledTemplate(item);
+      // add this rendered todo to our list of todos  
       compiledTodos.push(renderedTodo);
-    });
-    controller.render(compiledTodos);     // where all the logic is - does all the work
-    model.save();  // saves database
+    }); // end of for Each
+    // pass list of todos to the render function (where all the logic is - does all the work)
+    controller.render(compiledTodos);
+    // tell the model to save our data (database)
+    model.save();
   },
+  // remove event handlers from app
+  // get ready to re-render
   destroyEventHandlers: function(){
     controller.addButton.off();
     $('input[type="checkbox"]').off();
     $('.close').off();
   },
+  // add the event handlers
   createEventHandlers: function(){
-    controller.addButton.on('click', controller.addTodoHandler);     // using jquery to select add button
+    // using jquery to select add button
+    controller.addButton.on('click', controller.addTodoHandler);     
     $('input[type="checkbox"]').on('change', controller.checkedHandler); 
     $('.close').on('click', controller.removeHandler);  
   },
+  // event handler for the close x button
+  // deletes the todo
   removeHandler: function(event){
     // which one was clicked?
     var index = $(event.currentTarget).parent().parent().index(); // pass current target to jquery
@@ -72,6 +74,7 @@ var controller = {  // what mediates between the view and the model
     // update the view
     controller.renderTemplates();
   },
+  // event handler for the checkboxes
   checkedHandler: function(event){
     // which checkbox?
     var index = $(event.currentTarget).parent().parent().index(); // pass current target to jquery
@@ -80,9 +83,13 @@ var controller = {  // what mediates between the view and the model
     // view updates automatically, yay HTML!
     model.save();  // saves database
   },
+  // event handler for the ADD button
+  // creates a new todo
   addTodoHandler: function(){
-    var newTitle = $('.add-input').val(); // use jquery to grab value of input
-    if (newTitle === '') return;  // return signals the end (no "else")
+    // use jquery to grab value of input
+    var newTitle = $('.add-input').val();
+    // return signals the end (no "else") 
+    if (newTitle === '') return;  
     model.get().push({ // this is an object
       title: newTitle,
       completed: false

@@ -17,6 +17,7 @@ import threeExample from './pages/threeExample';
 // on document load
 $(function(){
 
+  // Kick off the app!
   console.log('%c App Started', 'color:green');
 
   // set default template settings
@@ -26,16 +27,21 @@ $(function(){
     escape:      /{{=([\s\S]+?)}}/g
   };
 
-  // Kick off the app!
-  // which page are we on???
-  if (window.location.pathname === '/pages/todo.html') {
+
+  // My First Router: which page are we on???
+  switch(window.location.pathname){
+  case '/pages/todo.html':
     todoController.init();
-  } else if (window.location.pathname === '/pages/multimedia.html') {
+    break;
+  case '/pages/multimedia.html':
     console.log('multimedia page started');
-  } else if (window.location.pathname === '/pages/d3example.html') {
+    break;
+  case '/pages/d3example.html':
     d3example.init();
-  } else if (window.location.pathname === '/pages/threeExample.html') {
-    threeExample.init(); 
+    break;
+  case '/pages/threeExample.html':
+    threeExample.init();
+    break;
   }
 
 
