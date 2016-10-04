@@ -1,25 +1,15 @@
 
 
-# To Use
+# Code Portfolio for mwinkelman
 
-- Create a repo on Github
-- `git clone` that repo on your local computer
-- Copy the template files into the project folder
-- `git add .`
-- `git commit -m "copied template"`
-- `git push origin master`
+- https://www.linkedin.com/in/michelewinkelman
 
-# To Launch
+- http://codepen.io/mlwinkelman/
 
-- `npm install`
-- `npm start`
+- git@github.com:mlwinkelman/Michele-JavaScript-Class.git
 
-# To Create Server
+- https://coding-paradise.herokuapp.com/
 
-- `heroku create`
-- `npm run prod`
-- `git add .`
-- `git commit -m "launching server"`
-- `git push heroku master`
-- `heroku open`
+- Here is the paragraph about myself. I'm a designer turned front-end developer who's looking for a job. Please hire me!
+
 

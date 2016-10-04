@@ -38,4 +38,10 @@ $(function(){
     threeExample.init(); 
   }
 
+
+  console.log('=====================================');
+  console.log('Please hire me! mlwinkelman@gmail.com');
+  console.log('=====================================');
+
+
 });
