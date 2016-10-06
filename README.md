@@ -19,6 +19,7 @@
 > rarely sat back and let things happen
 > to them. They went out and happened
 > to things.
+>
 > *– Leonardo da Vinci*
 
 

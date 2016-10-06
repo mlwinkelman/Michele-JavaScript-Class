@@ -33,12 +33,16 @@
   padding: 12px 0px 0px 0px;
   height: 57px;
   color: #42424c;
+  &.completed .todo-title {
+    text-decoration: line-through;
+    color: #6a6880;
+  }
 }
 .todo-container .btn-primary {
   float: right;
   width: 70px;
   background-color: #6a6880;
-  color: #00000;
+  color: white;
   border-color: #6a6880;
 }
 .todo-container .btn-primary:hover,

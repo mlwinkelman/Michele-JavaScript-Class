@@ -80,23 +80,28 @@ var controller = {  // what mediates between the view and the model
     var index = $(event.currentTarget).parent().parent().index(); // pass current target to jquery
     // update the database
     model.get()[index].completed = !model.get()[index].completed;   // current value changes to opposite
-    // view updates automatically, yay HTML!
     model.save();  // saves database
+    controller.renderTemplates();
   },
   // event handler for the ADD button
   // creates a new todo
   addTodoHandler: function(){
-    // use jquery to grab value of input
-    var newTitle = $('.add-input').val();
-    // return signals the end (no "else") 
-    if (newTitle === '') return;  
+    // use jquery.val() to grab value of input
+    var newTitle = $('.add-input').val(); // points at .add-input and grabs .val()
+    // return signals the end (no "else") so it exits and kills the function
+    if (newTitle === '') return;
+    // model.get() returns the database
+    // push adds and item to the database
     model.get().push({ // this is an object
       title: newTitle,
       completed: false
     });
+    // clear the text box
     $('.add-input').val('');  // (getter and setter) 
+    // updates the display using all the new data
     controller.renderTemplates();
   }
 };
 
+// specifies what will be returned when this file is imported
 module.exports = controller;
