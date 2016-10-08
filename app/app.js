@@ -9,6 +9,7 @@ require('bootstrap');
 // // import our styles
 import './stylesheets/base.scss';
 import _ from 'underscore';
+import navbar from './components/navbar';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import threeExample from './pages/threeExample';
@@ -27,6 +28,8 @@ $(function(){
     escape:      /{{=([\s\S]+?)}}/g
   };
 
+// launch navbar
+  navbar.init();
 
   // My First Router: which page are we on???
   switch(window.location.pathname){

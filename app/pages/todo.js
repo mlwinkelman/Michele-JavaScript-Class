@@ -32,18 +32,16 @@ var controller = {  // what mediates between the view and the model
     controller.createEventHandlers();  
   },
   renderTemplates: function(){
-    var compiledTodos = [];
     // model.get - get the database (an array)
     // then loop that runs once for each item
-    model.get().forEach(function(item, index){
+    var compiledTodos = model.get().map(function(item, index){
       // create an id equal to index + 1
       // the +1 adds numbering starting with 1 to make it more human readable
       // provides template with the id which is required by our view 
       item.id = index + 1;
+      // handlebars, step 2
       // replace {{id}} with the items id value (passes item to compiled template to produce rendered template and data (handlebars))
-      var renderedTodo = controller.compiledTemplate(item);
-      // add this rendered todo to our list of todos  
-      compiledTodos.push(renderedTodo);
+      return controller.compiledTemplate(item);
     }); // end of for Each
     // pass list of todos to the render function (where all the logic is - does all the work)
     controller.render(compiledTodos);
