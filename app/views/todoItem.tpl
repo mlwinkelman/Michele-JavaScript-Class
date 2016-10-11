@@ -2,7 +2,7 @@
   <div class="col-sm-1">{{- id }}</div>
   <div class="col-sm-7 todo-title">{{- title }}</div>
   <div class="col-sm-7 todo-title-edit hidden">
-    <input type="text" value="{{- title }}" />
+    <input type="text" value="{{- title }}" class="form-control add-input" />
   </div>
   <div class="col-sm-1">
     {{ if(completed){ }}
