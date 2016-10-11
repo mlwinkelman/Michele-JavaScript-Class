@@ -1,6 +1,6 @@
 
 var $ = window.$;
-var Handlebars = window.Handlebars;
+import _ from 'underscore';
 import model from '../models/todoModel';
 import view from 'text!../views/todoItem.tpl';
     
@@ -8,13 +8,9 @@ var controller = {  // what mediates between the view and the model
   init: function(){  // property called init that stores a function
     model.init();
     // cache a jquery selectors
-    controller.addButton = $('.btn-add');
-    // compile todo item template
-
-    /* pass view to handlebars to view/store compiled  
-    template (handelbars only has two functions: 
-    takes data object and puts into our compiled template)*/
-    controller.compiledTemplate = Handlebars.compile(view); 
+    controller.addButton = $('.btn-add'); 
+    // compile template
+    controller.compiledTemplate = _.template(view);
     // render the todo item template
     controller.renderTemplates();  // when controller runs, it renders the templates
   },
@@ -39,8 +35,7 @@ var controller = {  // what mediates between the view and the model
       // the +1 adds numbering starting with 1 to make it more human readable
       // provides template with the id which is required by our view 
       item.id = index + 1;
-      // handlebars, step 2
-      // replace {{id}} with the items id value (passes item to compiled template to produce rendered template and data (handlebars))
+      // replace {{id}} with the items id value (passes item to compiled template to produce rendered template and data
       return controller.compiledTemplate(item);
     }); // end of for Each
     // pass list of todos to the render function (where all the logic is - does all the work)
@@ -54,13 +49,59 @@ var controller = {  // what mediates between the view and the model
     controller.addButton.off();
     $('input[type="checkbox"]').off();
     $('.close').off();
+    $('.edit').off();
   },
   // add the event handlers
   createEventHandlers: function(){
     // using jquery to select add button
-    controller.addButton.on('click', controller.addTodoHandler);     
+    controller.addButton.on('click', controller.addTodoHandler);
+    $('.add-input').on('keypress', controller.addTodoKeypress);     
     $('input[type="checkbox"]').on('change', controller.checkedHandler); 
-    $('.close').on('click', controller.removeHandler);  
+    $('.close').on('click', controller.removeHandler);
+    // edit button handler
+    $('.edit').on('click', controller.editHandler);
+  },
+  addTodoKeypress: function(event){
+    if (event.which === 13) {
+      // they hit enter!
+      controller.addTodoHandler(event);
+    }
+  },
+  // event handler for edit button
+  editHandler: function(event){
+    // which item to edit??
+    var index = $(event.currentTarget).parent().parent().index();
+    var $item = $('.todo').eq(index);
+    // title text disappears
+    $item.find('.todo-title').addClass('hidden');
+    // text input appears
+    $item.find('.todo-title-edit').removeClass('hidden');
+    // edit button replaced by save button
+    $item.find('.edit').addClass('hidden');
+    $item.find('.save').removeClass('hidden');
+    // make check when they click on save button
+    $item.find('.save').on('click', controller.updateTitle);
+    $item.find('.todo-title-edit input').on('keypress', controller.updateTitleKeypress);
+  },
+  // handler to update title on Enter
+  updateTitleKeypress: function(event){
+    if (event.which === 13) {
+      // they hit enter!
+      // console.log(event.which); // or event.keyCode is the same if using jquery
+      controller.updateTitle(event);
+    }
+  },
+  updateTitle: function(event){
+    // which title??
+    var index = $(event.currentTarget).parent().parent().index();
+    var $item = $('.todo').eq(index);
+    $item.find('.save').off(); // turns off event handler
+    $item.find('.todo-title-edit input').off(); // turns off event handler
+    var newTodoTitle = $item.find('.todo-title-edit input').val();
+    // update the database
+    model.get()[index].title = newTodoTitle;
+    model.save();
+    controller.renderTemplates();
   },
   // event handler for the close x button
   // deletes the todo
