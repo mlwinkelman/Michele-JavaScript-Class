@@ -11,7 +11,8 @@ var todoItemView = Backbone.View.extend({
     'click .close': 'removeHandler',
     'click .edit': 'editHandler',
     'click .save': 'saveHandler',
-    'change input[type="checkbox"]': 'checkboxHandler'
+    'change input[type="checkbox"]': 'checkboxHandler',
+    'keypress .todo-title-edit-update': 'saveKeypress'
   },
   initialize: function(item, controller){ // item is the data object
     this.id = item.id;
@@ -39,6 +40,11 @@ var todoItemView = Backbone.View.extend({
   },
   checkboxHandler: function(){
     this.controller.changeComplete(this.id);
+  },
+  saveKeypress: function(event){
+    if (event.which === 13) {
+      this.saveHandler();
+    }
   }
 });
 
