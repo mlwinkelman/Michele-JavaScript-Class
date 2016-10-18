@@ -1,3 +1,4 @@
+// Controller - managing logic and user input
 
 var $ = window.$;
 import _ from 'underscore';

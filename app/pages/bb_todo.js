@@ -1,4 +1,4 @@
-// Controller is business logic; this is Controller/View
+// Controller - managing logic and user input; this is both Controller/View
 
 // import jquery & backbone
 // var $ = window.$;

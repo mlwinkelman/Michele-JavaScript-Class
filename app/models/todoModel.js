@@ -1,3 +1,5 @@
+// The Model - handles anything to do with data
+
 import lscache from 'lscache';
 
 var database = [];

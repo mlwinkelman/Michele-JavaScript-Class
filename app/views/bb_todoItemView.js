@@ -1,4 +1,4 @@
-// This is the view if it pertains to one particular item
+// The View, or user interface,  if it pertains to one particular item
 
 import Backbone from 'backbone';
 import _ from 'underscore';
