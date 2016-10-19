@@ -7,7 +7,7 @@
 }*/
 
 .home-header {
-  margin-top: -75px;
+  /*margin-top: -85px;*/
   width: 100vw;
   position: relative;
   left: 50%;
@@ -18,40 +18,54 @@
 }
 
 .name {
+  font-family: 'Oswald', sans-serif;
   position: absolute;
+  font-size: 5.1em;
+  @media (max-width: 800px) {
+    font-size: 3em;
+  }
+  font-weight: 300;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -20px;
+  margin-top: -10px;
   color: white;
   text-align: center;
 }
 
 .designer{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   position: absolute;
+  font-size: 2.5em;
+  @media (max-width: 800px) {
+    font-size: 1.5em;
+    margin-top: 30px;
+  }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 70px;
+  margin-top: 50px;
   color: white;
   text-align: center;
 }
 
 h1 {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin: 0;
-  font-size: 4rem;
-  /*white-space: nowrap;*/
+  /*font-size: 3rem;*/
+  white-space: nowrap;
 }
 
 h2 {
   text-transform: uppercase;  
   margin: 0;
-  font-size: 1.5rem;
+  /*font-size: 1em;*/
+  white-space: nowrap;
 }
 
-/*nav {
-  position: absolute;
+nav {
+  font-family: 'Open Sans', sans-serif;
+  /*position: absolute;*/
   color: white;
   text-align: right;
-}*/
+}
