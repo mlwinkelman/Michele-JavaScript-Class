@@ -1,20 +1,21 @@
-/*html { 
-  background: url(//unsplash.com/photos/YZbrSfZxNOw) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
+
 
 .home-header {
-  /*margin-top: -85px;*/
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+  url(/images/background-header2.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+ /* margin-top: -85px;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 .name {
@@ -28,7 +29,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -10px;
+  margin-top: 10px;
   color: white;
   text-align: center;
 }
@@ -39,12 +40,12 @@
   font-size: 2.5em;
   @media (max-width: 800px) {
     font-size: 1.5em;
-    margin-top: 30px;
+    margin-top: 50px;
   }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 50px;
+  margin-top: 70px;
   color: white;
   text-align: center;
 }
@@ -63,9 +64,28 @@ h2 {
   white-space: nowrap;
 }
 
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px;
+  padding-left: 10px;
+}
+
 nav {
   font-family: 'Open Sans', sans-serif;
   /*position: absolute;*/
   color: white;
   text-align: right;
+}
+
+.intro-paragraph {
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  width: 50%;
+  margin: 10px;
+  padding: 0px 10px 0px 10px;
 }
