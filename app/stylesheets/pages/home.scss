@@ -5,21 +5,24 @@
 }
 @-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}
 
-.container {
+.container-fluid {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-
 .home-header {
-  background: linear-gradient(
+  background: /*linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
-    ),
+    ),*/
   url(/images/background-header2.jpeg) no-repeat center center;
   background-size: cover;
   height: 100vh;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+ 
  /* margin-top: -85px;
   width: 100vw;
   position: relative;
@@ -63,29 +66,25 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  /*display: flex;*/
-  /*justify-content: center;*/
-
 }
 
 h1 {
-  margin: 0;
+  /*margin: 0;*/
   white-space: nowrap;
 }
 
-h2 {
+/*h2 {
   text-transform: uppercase;  
   margin-bottom: 20px;
-  /*font-size: 1em;*/
+  font-size: 1em;
   white-space: nowrap;
 }
-
+*/
 h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 10px;
-  /*padding-left: -2px;*/
 }
 
 nav {
@@ -95,18 +94,20 @@ nav {
   text-align: right;
 }
 
-.intro-paragraph {
+.container {
+  width: 80%;
+  /*margin: auto;*/
+}
+
+.about-me {
   @media (max-width: 800px) {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px 26px 0px 10px;
+    font-size: 15px;
+    padding: 30px 0px 0px 10px;
   }
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  width: 50%;
   color: #555555;
-  margin: 12px;
-  padding: 40px 30px 0px 30px;
+  padding: 40px 0px 20px 0px;
 }
 
 /* overlay to hide unstyled html */
