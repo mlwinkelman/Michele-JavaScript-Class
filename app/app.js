@@ -8,6 +8,7 @@ require('bootstrap');
 
 // // import our styles
 import './stylesheets/base.scss';
+import home from './pages/home';
 import navbar from './components/navbar';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
@@ -26,6 +27,9 @@ $(function(){
 
   // My First Router: which page are we on???
   switch(window.location.pathname){
+  case '/pages/main.hbs':
+    home.init();
+    break;
   case '/pages/bb_todo.html':
     new bbtodoController();
     break;

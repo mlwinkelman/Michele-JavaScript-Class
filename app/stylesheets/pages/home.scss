@@ -1,3 +1,15 @@
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 
 .home-header {
@@ -34,9 +46,10 @@
   text-align: center;
 }
 
-.designer{
+.designer {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   position: absolute;
+  text-transform: uppercase;
   font-size: 2.5em;
   @media (max-width: 800px) {
     font-size: 1.5em;
@@ -48,12 +61,15 @@
   margin-top: 70px;
   color: white;
   text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  /*display: flex;*/
+  /*justify-content: center;*/
+
 }
 
 h1 {
-  /*text-transform: uppercase;*/
   margin: 0;
-  /*font-size: 3rem;*/
   white-space: nowrap;
 }
 
@@ -79,10 +95,6 @@ nav {
   text-align: right;
 }
 
-/*.body-heading{
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-}*/
 .intro-paragraph {
   @media (max-width: 800px) {
     width: 100%;
@@ -92,6 +104,12 @@ nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   width: 50%;
+  color: #555555;
   margin: 12px;
   padding: 40px 30px 0px 30px;
+}
+
+/* overlay to hide unstyled html */
+#loadOverlay{
+  display: none;
 }

@@ -1,9 +1,10 @@
-/*body {
+.d3-body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
-  width: 960px;
-  height: 500px;
-  position: relative;
-}*/
+  width: 100%;
+  /*height: 500px;*/
+  position: absolute;
+  margin: 0 auto;
+}
 
 svg {
   width: 100%;
@@ -24,4 +25,5 @@ polyline{
 
 .randomize {
   font-size: 1.5em;
+  margin-left: 50px;
 }
