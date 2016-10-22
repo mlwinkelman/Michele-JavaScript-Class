@@ -1,26 +1,27 @@
 {{!< default}}
 <!-- overlay to hide unstyled html -->
-<div id="loadOverlay" class="fadeIn" style="background-color:#555; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
+<div id="loadOverlay" style="background-color:#E5E5E5; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
 <div id="root" class="fadeIn">
   <div class="container-fluid">
     <!-- HEADER -->
     <header class="home-header">
+    <!-- testing image load in html instead of css -->
+      <!-- <img src="/images/background-header2.jpeg"> -->
+      <div class="photo-container" style="background-image: url(/images/background-header2.jpeg)"></div>
       <h1 class="name">michele | WINKELMAN</h1>
-        <div data-maintext="front-end web developer" data-shaketext="designer" class="hover-text">FRONT-END WEB DEVELOPER</div>
+      <div title="Hover me!" data-maintext="front-end web developer" data-shaketext="designer" class="hover-text">FRONT-END WEB DEVELOPER</div>
             <!-- <h2 class="designer">designer & front-end web developer</h2> -->
       <!-- TOP NAVIGATION -->
-      <div class="row nav-wrapper">
-        <div class="col-sm-10 top-left"></div>
-        <div class="col-sm-2 top-right">
-          <a title="More" class="btn btn-action nav-button js-popover" href="">
-            <svg class="icon-btn icon-btn--dots" version="1.1" viewBox="0 0 32 32" width="32" height="32">
-              <path d="M7 15.5c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5zm21.5-3.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5zm-12.5 0c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"></path>
-            </svg>
-          </a>
-        <!-- close .top-right -->
-        </div>
-      <!-- close .row -->
+      <div class="top-left"></div>
+      <div class="top-right">
+        <a title="More" class="btn btn-action nav-button js-popover" href="">
+          <svg class="icon-btn icon-btn--dots" version="1.1" viewBox="0 0 32 32" width="32" height="32">
+            <path d="M7 15.5c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5zm21.5-3.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5zm-12.5 0c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5z"></path>
+          </svg>
+        </a>
+      <!-- close .top-right -->
       </div>
+      
       <nav></nav>
     </header>
   <div class="container">

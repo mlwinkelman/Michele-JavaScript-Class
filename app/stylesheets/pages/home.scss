@@ -2,10 +2,10 @@
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: both;
-  /*animation-delay: .5s;*/
 }
-@-webkit-keyframes fadeIn{0%{opacity:.2}to{opacity:1}}
-@keyframes fadeIn{0%{opacity:.2}to{opacity:1}}
+
+@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}
+@keyframes fadeIn{0%{opacity:0}to{opacity:1}}
 
 .container-fluid {
     width: 100%;
@@ -15,12 +15,13 @@
 
 .home-header {
   background: linear-gradient(
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
-    ),
-  url(/images/background-header2.jpeg) no-repeat center center;
-  background-size: cover;
-  height: 100vh;
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
+  /*no-repeat center center;*/
+  /*url(/images/background-header2.jpeg) no-repeat center center;*/
+  /*background-size: cover;*/
+  /*height: 100vh;*/
   @media (max-width: 800px) {
     padding: 0;
   }
@@ -33,6 +34,17 @@
   margin-left: -50vw;
   margin-right: -50vw;
   overflow: hidden;*/
+}
+
+.photo-container {
+  /*background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );*/
+  background-size: cover;
+  height: 100vh;
+  background-position-x: 50%;
+  background-position-y: center;
 }
 
 .name {
@@ -84,24 +96,18 @@ h1 {
 }
 */
 
-.nav-wrapper {
-  width: 100%;
-  margin: auto;
-  padding: 20px 5px;
-}
-
 .top-right {
-    /*position: relative;*/
-    /*width: 100%;*/
+    position: absolute;
+    width: 80%;
     margin: 0px;
-    /*top: 0;*/
-    /*right: 0;*/
-    /*z-index: 10;*/
-    /*width: 80%;*/
-    /*height: 32px;*/
-    /*text-align: right;*/
+    top: 20px;
+    right: 0;
+    z-index: 10;
+    width: 80%;
+    height: 32px;
+    text-align: right;
     /*display: -webkit-box;*/
-    /*display: flex;*/
+    display: flex;
 }
 
 .nav-button {
@@ -138,7 +144,7 @@ h3 {
 
 nav {
   font-family: 'Open Sans', sans-serif;
-  /*position: absolute;*/
+  position: absolute;
   color: white;
   text-align: right;
 }

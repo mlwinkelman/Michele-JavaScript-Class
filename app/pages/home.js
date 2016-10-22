@@ -6,8 +6,17 @@ var app = {
     app.render();
   },
   render: function(){
-    // debugger;
     //do all the visual stuff
+    // init();
+    // function init(){
+    //   var $bgImage = $('url');
+    //   $bgImage.on('load', function(){
+    //     // fade out overlay
+    //     $('#loadOverlay').animate({opacity: 0});
+    //   });
+    //   $bgImage.attr('src', '/images/background-header2.jpeg');
+    // }
+    // hover developer/designer
     $('.hover-text').hover(function(){
       $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
         console.log('Do something.');
