@@ -2,8 +2,10 @@
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: both;
+  animation-delay: .5s;
 }
-@-webkit-keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}
+@-webkit-keyframes fadeIn{0%{opacity:.2}to{opacity:1}}
+@keyframes fadeIn{0%{opacity:.2}to{opacity:1}}
 
 .container-fluid {
     width: 100%;
@@ -12,10 +14,10 @@
 }
 
 .home-header {
-  background: /*linear-gradient(
+  background: linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
-    ),*/
+    ),
   url(/images/background-header2.jpeg) no-repeat center center;
   background-size: cover;
   height: 100vh;
@@ -49,8 +51,8 @@
   text-align: center;
 }
 
-.designer {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+.hover-text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
   position: absolute;
   text-transform: uppercase;
   font-size: 2.5em;
@@ -66,6 +68,7 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+  cursor: crosshair;
 }
 
 h1 {
@@ -80,6 +83,51 @@ h1 {
   white-space: nowrap;
 }
 */
+
+.nav-wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 20px 5px;
+}
+
+.top-right {
+    /*position: relative;*/
+    /*width: 100%;*/
+    margin: 0px;
+    /*top: 0;*/
+    /*right: 0;*/
+    /*z-index: 10;*/
+    /*width: 80%;*/
+    /*height: 32px;*/
+    /*text-align: right;*/
+    /*display: -webkit-box;*/
+    /*display: flex;*/
+}
+
+.nav-button {
+    color: #777;
+    fill: #777;
+    opacity: .5;
+    background-color: hsla(0,0%,100%,.8);
+    /*display: inline-block;*/
+    height: 32px;
+    padding: 0 11px;
+    font-size: 11px;
+    font-weight: 700;
+    /*text-transform: uppercase;*/
+    line-height: 30px;
+    /*letter-spacing: .04em;*/
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    float: right;
+}
+
 h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
@@ -108,6 +156,15 @@ nav {
   font-size: 16px;
   color: #555555;
   padding: 40px 0px 20px 0px;
+}
+
+.skills {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5.1em;
+  font-weight: 400;
+  color: #555555;
+  padding: 40px 0px 20px 0px;
+  text-align: center;
 }
 
 /* overlay to hide unstyled html */

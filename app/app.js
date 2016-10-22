@@ -27,7 +27,7 @@ $(function(){
 
   // My First Router: which page are we on???
   switch(window.location.pathname){
-  case '/pages/main.hbs':
+  case '/':
     home.init();
     break;
   case '/pages/bb_todo.html':
