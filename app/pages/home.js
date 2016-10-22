@@ -13,9 +13,11 @@ var app = {
     //   $bgImage.on('load', function(){
     //     // fade out overlay
     //     $('#loadOverlay').animate({opacity: 0});
+    //     console.log('It is working');
     //   });
-    //   $bgImage.attr('src', '/images/background-header2.jpeg');
+    //   $bgImage.attr('url', '/images/background-header2.jpeg');
     // }
+
     // hover developer/designer
     $('.hover-text').hover(function(){
       $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
