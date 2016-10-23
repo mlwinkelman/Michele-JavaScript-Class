@@ -13,14 +13,12 @@ var app = {
       // preload background image
       $bgImage.onload = function(){
         $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
-        // fade out overlay
-        
-        
       };
 
-      $bgImage.scr = '/images/background-header2.jpeg';
+      $bgImage.src = '/images/background-header2.jpeg';
+      // fade out overlay
       $('#loadOverlay').animate({opacity: 0});
-      console.log('Working!');
+      console.log($bgImage);
     }
 
 // $(document).ready( function() {
