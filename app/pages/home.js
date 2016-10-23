@@ -7,16 +7,32 @@ var app = {
   },
   render: function(){
     //do all the visual stuff
-    // init();
-    // function init(){
-    //   var $bgImage = $('url');
-    //   $bgImage.on('load', function(){
-    //     // fade out overlay
-    //     $('#loadOverlay').animate({opacity: 0});
-    //     console.log('It is working');
-    //   });
-    //   $bgImage.attr('url', '/images/background-header2.jpeg');
-    // }
+    init();
+    function init(){
+      var $bgImage = new Image();
+      // preload background image
+      $bgImage.onload = function(){
+        $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
+        // fade out overlay
+        $('#loadOverlay').animate({opacity: 0});
+        
+      };
+
+      $bgImage.scr = '/images/background-header2.jpeg';
+      console.log('Working!');
+    }
+
+// $(document).ready( function() {
+
+//     var c = new Image();
+
+//     c.onload = function(){
+//         $("#Your Div ID").css("background-image", "url(Path to Background Image)");  
+//     }
+
+//     c.src = "Path to Background Image";
+
+// });
 
     // hover developer/designer
     $('.hover-text').hover(function(){
