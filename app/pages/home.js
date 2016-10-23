@@ -14,11 +14,12 @@ var app = {
       $bgImage.onload = function(){
         $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
         // fade out overlay
-        $('#loadOverlay').animate({opacity: 0});
+        
         
       };
 
       $bgImage.scr = '/images/background-header2.jpeg';
+      $('#loadOverlay').animate({opacity: 0});
       console.log('Working!');
     }
 
