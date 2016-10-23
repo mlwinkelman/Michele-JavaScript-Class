@@ -3,7 +3,6 @@
   opacity: 0;
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-delay: 1s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -193,4 +192,8 @@ nav {
 /* overlay to hide unstyled html */
 #loadOverlay{
   display: none;
+}
+
+div.hidden {
+  display: none
 }

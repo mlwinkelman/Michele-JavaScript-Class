@@ -17,21 +17,13 @@ var app = {
 
       $bgImage.src = '/images/background-header2.jpeg';
       // fade out overlay
-      $('#loadOverlay').animate({opacity: 0});
+      // $('#loadOverlay').animate({opacity: 0});
       console.log($bgImage);
     }
 
-// $(document).ready( function() {
-
-//     var c = new Image();
-
-//     c.onload = function(){
-//         $("#Your Div ID").css("background-image", "url(Path to Background Image)");  
-//     }
-
-//     c.src = "Path to Background Image";
-
-// });
+    $(document).ready( function() {
+      $('div.hidden').fadeIn(1000).removeClass('hidden');
+    });
 
     // hover developer/designer
     $('.hover-text').hover(function(){
