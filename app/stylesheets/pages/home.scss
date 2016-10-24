@@ -98,18 +98,47 @@ h1 {
 }
 */
 
-.top-right {
+.home-nav {
+  position: absolute;
+  top: 0px;
+  z-index: 8;
+  width: 100%;
+  height: 72px;
+  background-color: #333333;
+  opacity: .3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: right;
+}
+.home-nav ul {
+  /*height: auto;*/
+  padding: 25px 10px;
+  margin: 0px;
+}
+.home-nav li {
+  display: inline;
+  padding: 25px;
+  color: white;
+}
+.home-nav a {
+  text-decoration: none;
+  color: white;
+}
+.home-nav a:hover {
+
+}
+
+.top-left {
     position: absolute;
-    width: 80%;
+    width: 20%;
     margin: 0px;
     top: 20px;
-    right: 0;
+    left: 20px;
     z-index: 10;
-    width: 80%;
     height: 32px;
     text-align: right;
     /*display: -webkit-box;*/
-    display: flex;
+    /*display: flex;*/
 }
 
 .nav-button {
@@ -134,7 +163,7 @@ h1 {
     transition: all .2s ease-in-out;
     box-shadow: 0 1px 1px rgba(0,0,0,.04);
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    float: right;
+    float: left;
 }
 
 h3 {
@@ -184,6 +213,7 @@ nav {
   display: none;
 }
 
+/* hidden div while home window loads before fadein */
 div.hidden {
   display: none
 }

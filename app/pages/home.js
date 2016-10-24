@@ -8,7 +8,7 @@ var app = {
   render: function(){
     //do all the visual stuff
 
-    // preload background image
+    // preload background image (do I need this with window.load below?)
     init();
     function init(){
       var $bgImage = new Image();
@@ -17,14 +17,10 @@ var app = {
       };
 
       $bgImage.src = '/images/background-header2.jpeg';
-      // fade out overlay
-      // $('#loadOverlay').animate({opacity: 0});
-      console.log('I think it worked!');
     }
-
+    // on window load, fade in image container
     $(window).load(function() {
       $('div.hidden').fadeIn(1000).removeClass('hidden');
-      console.log('Did it fade in?');
     });
 
     // hover developer/designer
