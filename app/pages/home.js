@@ -7,10 +7,11 @@ var app = {
   },
   render: function(){
     //do all the visual stuff
+
+    // preload background image
     init();
     function init(){
       var $bgImage = new Image();
-      // preload background image
       $bgImage.onload = function(){
         $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
       };
@@ -18,21 +19,22 @@ var app = {
       $bgImage.src = '/images/background-header2.jpeg';
       // fade out overlay
       // $('#loadOverlay').animate({opacity: 0});
-      console.log($bgImage);
+      console.log('I think it worked!');
     }
 
-    $(document).ready( function() {
+    $(window).load(function() {
       $('div.hidden').fadeIn(1000).removeClass('hidden');
+      console.log('Did it fade in?');
     });
 
     // hover developer/designer
     $('.hover-text').hover(function(){
       $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
-        console.log('Do something.');
+        // console.log('Do something.');
       });
     },function(){
       $(this).textShake(500, 100, $(this).data('shaketext'), $(this).data('maintext'), function(){
-        console.log('Do something again xD.');
+        // console.log('Do something again xD.');
       });
     });
 

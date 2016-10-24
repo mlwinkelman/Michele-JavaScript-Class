@@ -33,22 +33,9 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     );*/
-  /*no-repeat center center;*/
-  /*url(/images/background-header2.jpeg) no-repeat center center;*/
-  /*background-size: cover;*/
-  /*height: 100vh;*/
   @media (max-width: 800px) {
     padding: 0;
   }
- 
- /* margin-top: -85px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;*/
 }
 
 .photo-container {
@@ -187,6 +174,9 @@ nav {
   color: #555555;
   padding: 40px 0px 20px 0px;
   text-align: center;
+  @media (max-width: 800px) {
+    font-size: 3.5em;
+  }
 }
 
 /* overlay to hide unstyled html */
