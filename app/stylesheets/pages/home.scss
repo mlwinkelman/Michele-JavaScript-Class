@@ -52,9 +52,9 @@
 .name {
   font-family: 'Oswald', sans-serif;
   position: absolute;
-  font-size: 5.1em;
+  font-size: 5.4em;
   @media (max-width: 800px) {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   font-weight: 300;
   top: 50%;
@@ -66,12 +66,12 @@
 }
 
 .hover-text {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-family: 'Open Sans', sans-serif;
   position: absolute;
   text-transform: uppercase;
   font-size: 2.5em;
   @media (max-width: 800px) {
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-top: 50px;
   }
   top: 50%;
@@ -89,14 +89,6 @@ h1 {
   /*margin: 0;*/
   white-space: nowrap;
 }
-
-/*h2 {
-  text-transform: uppercase;  
-  margin-bottom: 20px;
-  font-size: 1em;
-  white-space: nowrap;
-}
-*/
 
 .home-nav {
   position: absolute;
@@ -124,8 +116,34 @@ h1 {
   text-decoration: none;
   color: white;
 }
-.home-nav a:hover {
-
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #65b7bd;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
 
 .top-left {
@@ -168,6 +186,7 @@ h1 {
 
 h3 {
   font-family: 'Oswald', sans-serif;
+  color: #6D868D;
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -180,11 +199,27 @@ nav {
   text-align: right;
 }
 
+.midder {
+  /*display: inline-block;*/
+  /*position: absolute;*/
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: #555555;
+  margin: 0;
+  height: 150px;
+  background-color: #8E8E38;
+  padding: 40px 0px 20px 0px;
+  text-align: center;
+  @media (max-width: 800px) {
+    font-size: 1.5em;
+  }
+}
+
 .container {
   width: 80%;
   /*margin: auto;*/
 }
-
 .about-me {
   @media (max-width: 800px) {
     font-size: 15px;
@@ -195,17 +230,12 @@ nav {
   color: #555555;
   padding: 40px 0px 20px 0px;
 }
-
-.skills {
-  font-family: 'Oswald', sans-serif;
-  font-size: 5.1em;
-  font-weight: 400;
+.tech-skills {
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
   color: #555555;
-  padding: 40px 0px 20px 0px;
   text-align: center;
-  @media (max-width: 800px) {
-    font-size: 3.5em;
-  }
 }
 
 /* overlay to hide unstyled html */
