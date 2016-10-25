@@ -14,6 +14,7 @@ import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import threeExample from './pages/threeExample';
 import bbtodoController from './pages/bb_todo';
+import photoSearchController from './pages/photoSearch';
 // import multimediaController from './pages/multimedia';
 
 // on document load
@@ -31,7 +32,7 @@ $(function(){
     home.init();
     break;
   case '/pages/bb_todo.html':
-    new bbtodoController();
+    new bbtodoController(); // use backbone pattern
     break;
   case '/pages/todo.html':
     todoController.init();
@@ -44,6 +45,9 @@ $(function(){
     break;
   case '/pages/threeExample.html':
     threeExample.init();
+    break;
+  case '/pages/photoSearch.html':
+    new photoSearchController(); // use backbone pattern
     break;
   }
 

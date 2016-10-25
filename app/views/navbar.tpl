@@ -17,4 +17,7 @@
   <li>
     <a href="/pages/threeExample.html">Three</a>
   </li>
+  <li>
+    <a href="/pages/photoSearch.html">Photo Search</a>
+  </li>
 </ul>
