@@ -1,44 +1,33 @@
-// Controller - managing logic and user input; this is both Controller/View
+// Controller - managing logic and user input
 
 // import jquery & backbone
 // var $ = window.$;
 import Backbone from 'backbone';
 import bbTodoModel from '../models/bb_todoModel';
-import bbTodoItemView from '../views/bb_todoItemView';
+import bbTodoView from '../views/bb_todoView';
 
-var ControllerView = Backbone.View.extend({
-  el: '.todo-container', // element
-  events: {
-    'click .btn-add': 'addTodo',
-    'keypress .add-input': 'addKeypress'
-  },
+var Controller = Backbone.View.extend({
   model: new bbTodoModel(), // need to call new to get the model in
   initialize: function(){
     this.model.fetch();  // tells model to get data from lscache
     this.render();
   },
   render: function(){
-    // alert('you have ' + this.model.get('todos').length + ' todos!'); // test
+    // get list of todos
     var todos = this.model.get('todos');
-    // render each todo item
-    var that = this;
-    var renderedTodos = todos.map(function(item, index){
-      item.id = index + 1;
-      var view = new bbTodoItemView(item, that); // instantiating new todo item view
-      return view.$el; // returning jquery items
-    }); 
-    // put all the todo items into the dom
-    this.$el.find('.todo-list').html(renderedTodos);
+    if (this.view !== undefined) {
+      this.view.removeHandlers();
+    }
+    // pass todos in when we instantiate it; store the view
+    this.view = new bbTodoView(todos, this);
   },
-  addTodo: function(){ // adds the todo (don't confuse with function of same name in model)
-    var newTitle = this.$el.find('.add-input').val();
+  addTodo: function(newTitle){ // adds the todo (don't confuse with function of same name in model)
     this.model.addTodo(newTitle);
-    this.$el.find('.add-input').val('');
     this.render();
   },
-  addKeypress: function(event){
+  addKeypress: function(event, newTitle){
     if (event.which === 13) {
-      this.addTodo();
+      this.addTodo(newTitle);
     }
   },
   removeTodo: function(id){
@@ -61,7 +50,7 @@ var ControllerView = Backbone.View.extend({
   }
 });
 
-module.exports = ControllerView;
+module.exports = Controller;
 
 
 
