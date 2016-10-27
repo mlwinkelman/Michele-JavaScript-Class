@@ -6,7 +6,8 @@ import bbTodoItemView from '../views/bb_todoItemView';
 var TodoView = Backbone.View.extend({
   el: '.todo-container', // element
   events: {
-    'click .btn-add': 'addTodo'
+    'click .btn-add': 'addTodo'//,
+    // TODO not working ...
     // 'keypress .add-input': 'addKeypress'
   },
   initialize: function(todos, controller){

@@ -1,21 +1,34 @@
 // Model handles anything to do with data
 
+var $ = window.$;
 import Backbone from 'backbone';
-import lscache from 'lscache';
 
 var model = Backbone.Model.extend({
   defaults: {
     todos: []  // data starts as empty array
   },
-  fetch: function(){
-    var savedTodos = lscache.get('todos');
-    if (savedTodos !== null) {  // defensive programming
-      this.set('todos', savedTodos); 
-    }
+  fetch: function(callback){
+    var that = this;
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: '/api/todos',
+      success: function(todos){
+        that.set('todos', todos);
+        if (typeof callback === 'function') {
+          callback();
+        }
+      }
+    });
   },
   save: function(){
-    var todos = this.get('todos');
-    lscache.set('todos', todos);
+    $.ajax({
+      method: 'POST',
+      data: {
+        todos: JSON.stringify(this.get('todos'))
+      },
+      url: '/api/todos'
+    });
   },
   addTodo: function(newTitle){ // doesn't really add a todo but instead handles the button click so maybe should be named something else?
     if (newTitle.length > 0) { // validating that new title contains at least 1 character

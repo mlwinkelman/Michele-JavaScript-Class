@@ -9,8 +9,11 @@ import bbTodoView from '../views/bb_todoView';
 var Controller = Backbone.View.extend({
   model: new bbTodoModel(), // need to call new to get the model in
   initialize: function(){
-    this.model.fetch();  // tells model to get data from lscache
-    this.render();
+    var that = this;
+    // fetch will call render when done
+    this.model.fetch(function(){
+      that.render();
+    });  // tells model to get data
   },
   render: function(){
     // get list of todos
