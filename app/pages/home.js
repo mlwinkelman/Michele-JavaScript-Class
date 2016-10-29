@@ -3,25 +3,23 @@ var $ = window.$;
 var app = {
 
   init: function(){
-    app.render();
+
+   // preload background image
+    var $bgImage = new Image();
+    $bgImage.onload = function(){
+      app.render();
+    };
+    $bgImage.src = '/images/background-header2.jpeg';
+
   },
   render: function(){
     //do all the visual stuff
-
-    // preload background image (do I need this with window.load below?)
-    init();
-    function init(){
-      var $bgImage = new Image();
-      $bgImage.onload = function(){
-        $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
-      };
-
-      $bgImage.src = '/images/background-header2.jpeg';
-    }
-    // on window load, fade in image container
-    $(window).load(function() {
-      $('div.hidden').fadeIn(1000).removeClass('hidden');
-    });
+    $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
+    $('.main-container').fadeIn(1000, function(){
+      // hide preloader is the callback or "complete" argument of the fadeIn function
+      $('.preloader').addClass('hidden'); 
+    }).removeClass('hidden');
+    
 
     // hover developer/designer
     $('.hover-text').hover(function(){
