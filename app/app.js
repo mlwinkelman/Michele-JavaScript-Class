@@ -10,10 +10,12 @@ require('bootstrap');
 import './stylesheets/base.scss';
 import home from './pages/home';
 import navbar from './components/navbar';
+// import smartFixedNavigation from './components/smartFixedNavigation';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import threeExample from './pages/threeExample';
 import bbtodoController from './pages/bb_todo';
+import rTodoController from './pages/r_todo';
 import photoSearchController from './pages/photoSearch';
 // import multimediaController from './pages/multimedia';
 
@@ -26,6 +28,9 @@ $(function(){
 // launch navbar
   navbar.init();
 
+// launch smartFixedNav
+  // smartFixedNavigation.init();
+
   // My First Router: which page are we on???
   switch(window.location.pathname){
   case '/':
@@ -33,6 +38,9 @@ $(function(){
     break;
   case '/pages/bb_todo.html':
     new bbtodoController(); // use backbone pattern
+    break;
+  case '/pages/r_todo.html':
+    new rTodoController(); // use backbone pattern
     break;
   case '/pages/todo.html':
     todoController.init();

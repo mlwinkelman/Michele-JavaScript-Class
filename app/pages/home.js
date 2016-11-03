@@ -4,12 +4,13 @@ var app = {
 
   init: function(){
 
-   // preload background image
+   // preload background image, then call render function
     var $bgImage = new Image();
     $bgImage.onload = function(){
       app.render();
     };
     $bgImage.src = '/images/background-header2.jpeg';
+    // $bgImage.src = '/images/Background-Road.jpeg';
 
   },
   render: function(){

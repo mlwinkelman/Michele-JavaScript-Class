@@ -53,6 +53,7 @@ body {
   height: 100vh;
   background-position-x: 50%;
   background-position-y: center;
+  box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
 }
 
 .name {
@@ -414,10 +415,14 @@ margin-left: -3px;
   flex-shrink: 0;
   flex-basis: 300px;
 }
+.footer-info-container a {
+  text-decoration: none;
+}
 .name-small {
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
   font-weight: 300;
+  color: white;
 }
 .footer-info-container p {
   padding: 0;
