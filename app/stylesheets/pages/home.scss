@@ -9,7 +9,10 @@
   position: absolute;
 }
 body {
+  box-sizing: border-box;
+  margin: 0;
   overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .fadeIn {
@@ -36,18 +39,17 @@ body {
   }
 }
 
+/* HOME HEADER */
 .container-fluid {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-
 .home-header {
   @media (max-width: 800px) {
     padding: 0;
   }
 }
-
 .photo-container {
   background-size: cover;
   height: 100vh;
@@ -55,7 +57,6 @@ body {
   background-position-y: center;
   box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
 }
-
 .name {
   font-family: 'Oswald', sans-serif;
   position: absolute;
@@ -71,7 +72,6 @@ body {
   color: white;
   text-align: center;
 }
-
 .hover-text {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
@@ -91,12 +91,12 @@ body {
   white-space: nowrap;
   cursor: crosshair;
 }
-
 h1 {
   /*margin: 0;*/
   white-space: nowrap;
 }
 
+/* NAVIGATION */
 .home-nav {
   display: flex;
   justify-content: flex-end;
@@ -154,59 +154,14 @@ h1 {
   right: 0;
 }
 
-/*.top-left {
-    position: absolute;
-    width: 20%;
-    margin: 0px;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    height: 32px;
-    text-align: right;
-    display: -webkit-box;
-    display: flex;
-}*/
-
-.nav-button {
-    color: #777;
-    fill: #777;
-    opacity: .5;
-    background-color: hsla(0,0%,100%,.8);
-    /*display: inline-block;*/
-    height: 32px;
-    width: 56px;
-    padding: 0 11px;
-    font-size: 11px;
-    font-weight: 700;
-    /*text-transform: uppercase;*/
-    line-height: 30px;
-    /*letter-spacing: .04em;*/
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    text-decoration: none;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    float: left;
-}
-
-h3 {
-  font-family: 'Oswald', sans-serif;
-  color: #6D868D;
-  font-size: 25px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
+/* ACTUALLY WILL BE PORTFOLIO LINKS */
 nav {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
-  color: white;
   text-align: right;
 }
 
+/* MIDDER */
 .midder {
   display: flex;
   justify-content: center;
@@ -224,11 +179,17 @@ nav {
   }
 }
 
+/* ABOUT ME */
 .flex-container {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding: 45px 0 25px 0;
+  /*padding: 45px 0 25px 0;*/
+  padding: 100px 0 60px 0;
+  @media (min-width: 768px) {
+    padding: 150px 0 100px 0;
+    width: 80%;
+  }
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -243,8 +204,8 @@ nav {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 300px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-size: 15px;
   line-height: 1.5em;
   @media (max-width: 800px) {
     font-size: 15px;
@@ -252,10 +213,15 @@ nav {
   }
   color: #555555;
 }
-
+h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #6D868D;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
 /* Allows icons to be sized */
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-
 font-size: 70px;
 line-height: 1em;
 color: #6D868D;
@@ -278,44 +244,50 @@ margin-left: -3px;
   text-align: center;
 }
 
-/*.skills-logos {
-  display: flex;
-  justify-content: center;
-  @media (max-width: 414px) {
-    justify-content: flex-start;
-  }
-  align-items: stretch;
-  flex-wrap: nowrap;
+/* PORTFOLIO */
+.section-heading {
+  height: 50px;
+  /*width: 100%;*/
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3em;
   color: #6D868D;
-  padding-left: 0px;
-  padding-top: 20px;
-  height: 100%;
-}*/
-/*.skills-logos ul {
-  margin: 0 0 0 -20px;
-  @media (max-width: 414px) {
-    margin-left: 0;
-  }
+  /*margin-bottom: 60px;*/
 }
-.skills-logos li {
-  display: inline;
-  padding: 15px;
-}*/
 
-/*.icon-javascript-alt {
-  font-size: 57px;
-  position: relative;
-  top: 5px;
-}*/
+.bg-light-gray {
+  background-color: #eeeeee;
+}
 
 .portfolio-flex-container {
-  display: flex;
+  text-align: center;
+  width: 100vw;
+  display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: 'Oswald', sans-serif;
-  font-size: 40px;
-  line-height: 1.25em;
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start;
+  padding: 100px 0 60px 0;
+  @media (min-width: 768px) {
+    padding: 150px 0;
+  }
 }
+.portfolio-item-default {
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #555;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+/* --------- MY CODE ABOVE ---------- */
+
+
+
+/* MY CODE STARTS HERE */
 .portfolio-flex-items-default {
   display: flex;
   justify-content: center;
@@ -324,18 +296,21 @@ margin-left: -3px;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 275px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  line-height: 1.25em;
 }
 .portfolio-flex-items-default a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
-.web-portfolio-link {
+/*.web-portfolio-link {
   background-color: #C1CDCD;
 }
 .web-portfolio-link:hover {
     box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.2);
-}
+}*/
 .print-portfolio-link {
   background-color: #838B8B;
 }
@@ -352,8 +327,11 @@ margin-left: -3px;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding: 45px 0 25px 0;
-  font-family: 'Open Sans', sans-serif;
+  /*padding: 45px 0 25px 0;*/
+  padding: 60px 0;
+  @media (min-width: 768px) {
+    padding: 110px 0;
+  }
   font-size: 16px;
   line-height: 1.5em;
   color: white;
@@ -362,10 +340,13 @@ margin-left: -3px;
 .contact-items {
   text-align: center;
   width: 300px;
+  @media (max-width: 914px) {
+    flex-grow: 0;
+  }
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 300px;
-  padding: 0px 15px 20px 15px;
+  padding: 15px;
   @media (max-width: 800px) {
     font-size: 15px;
     padding: 0 30px 20px 30px;
@@ -382,7 +363,8 @@ margin-left: -3px;
   padding: 15px 17px 15px 17px;
 }
 .contact-items p {
-  padding: 5px 0 0 0;
+  padding: 5px;
+  /*margin-bottom: 10px;*/
 }
 .contact-items a {
   text-decoration: none;
@@ -392,6 +374,11 @@ margin-left: -3px;
 }
 .contact li {
   display: block;
+}
+.contact-message {
+  @media (max-width: 800px) {
+    margin-bottom: 30px;
+  }
 }
 
 /* FOOTER */
