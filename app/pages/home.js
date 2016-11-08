@@ -17,7 +17,7 @@ var app = {
     //do all the visual stuff
     $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
     $('.main-container').fadeIn(1000, function(){
-      // hide preloader is the callback or "complete" argument of the fadeIn function
+      // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
       $('.preloader').addClass('hidden'); 
     }).css({display:'block'});
     

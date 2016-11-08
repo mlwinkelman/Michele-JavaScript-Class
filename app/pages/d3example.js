@@ -17,6 +17,7 @@ var app = {
       .attr('class', 'labels');
     svg.append('g')
       .attr('class', 'lines');
+    
 
     var width = 960,
       height = 450,

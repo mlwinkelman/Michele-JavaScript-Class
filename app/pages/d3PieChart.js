@@ -10,14 +10,14 @@ var app = {
     new d3pie('pieChart', {
       'header': {
         'title': {
-          'text': 'Lots of Programming Languages',
+          'text': 'Programming Languages',
           'fontSize': 24,
-          'font': 'open sans'
+          'font': 'Open Sans',
         },
         'subtitle': {
           'text': 'A full pie chart to show off label collision detection and resolution.',
           'color': '#999999',
-          'fontSize': 12,
+          'fontSize': 14,
           'font': 'open sans'
         },
         'titleSubtitlePadding': 9
@@ -29,8 +29,8 @@ var app = {
         'location': 'bottom-left'
       },
       'size': {
-        'canvasHeight': 700,
-        'canvasWidth': 800,
+        'canvasHeight': 600,
+        'canvasWidth': 700,
         'pieInnerRadius': '26%',
         'pieOuterRadius': '90%'
       },
@@ -214,7 +214,7 @@ var app = {
       'misc': {
         'gradient': {
           'enabled': true,
-          'percentage': 100
+          'percentage': 50
         }
       }
     });
