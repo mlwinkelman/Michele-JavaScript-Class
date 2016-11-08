@@ -4,7 +4,9 @@
 // var $ = window.$;
 import Backbone from 'backbone';
 import rTodoModel from '../models/r_todoModel';
-import rTodoView from '../views/r_todoView';
+import TodoView from '../views/r_todoView';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
 var Controller = Backbone.View.extend({
   model: new rTodoModel(), // need to call new to get the model in
@@ -18,11 +20,13 @@ var Controller = Backbone.View.extend({
   render: function(){
     // get list of todos
     var todos = this.model.get('todos');
-    if (this.view !== undefined) {
-      this.view.removeHandlers();
-    }
-    // pass todos in when we instantiate it; store the view
-    this.view = new rTodoView(todos, this);
+
+    ReactDOM.render(
+      // pass in two arguments: html and where in the dom we want it rendered
+      <TodoView todos={todos} controller={this} />,
+      document.querySelector('.todo-container')
+      );
+
   },
   addTodo: function(newTitle){ // adds the todo (don't confuse with function of same name in model)
     this.model.addTodo(newTitle);

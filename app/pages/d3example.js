@@ -7,7 +7,7 @@ var app = {
   },
   render: function(){
     //do all the visual stuff
-    var svg = d3.select('body')
+    var svg = d3.select('.d3-container')
       .append('svg')
       .append('g');
 

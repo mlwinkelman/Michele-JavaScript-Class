@@ -1,57 +1,63 @@
 // View
 
-import Backbone from 'backbone';
-import ReactDOM from 'react-dom';
 import React from 'react';
-import TodoItemView from '../views/r_todoItemView';
+import TodoItemView from './r_todoItemView';
 
-var TodoView = Backbone.View.extend({
-  el: '.todo-container', // element
-  events: {
-    'click .btn-add': 'addTodo'//,
-    // TODO not working ...
-    // 'keypress .add-input': 'addKeypress'
+var todoView = React.createClass({
+  getInitialState: function(){
+    return {
+      newTitle: ''
+    };
   },
-  initialize: function(todos, controller){
-    this.controller = controller;
-    // pass todos to render function
-    this.render(todos);
+  propTypes: {
+    todos: React.PropTypes.array.isRequired,
+    controller: React.PropTypes.object.isRequired
   },
-  render: function(todos){
-    // render each todo item
-    var controller = this.controller;
+  render: function(){
+    var controller = this.props.controller;
     // map always returns an array with same number of items as original
-    var todosHtml = todos.map(function(todo, index){
+    var todosHtml = this.props.todos.map(function(todo, index){
       todo.id = index + 1;
       return <TodoItemView key={index} item={todo} controller={controller} />; // self-closing tag (tag syntax with two passed in properties)
     });
-
-    // React starts with this command
-    ReactDOM.render(
-      <div>{todosHtml}</div>,
-      // find this element - jquery doesn't play nice with react
-      this.$el.find('.todo-list')[0] // [0] returns vanilla js object that jquery is finding
+    return (
+      <div>
+        <div className="row">
+          <div className="col-sm-12 col-xs-12 title-row">
+            <p>my todos</p>
+          </div>
+        </div>
+        <div className="row add-todo-row">
+          <div className="col-sm-10 col-xs-8">
+            <input type="text" className="form-control add-input" value={this.state.newTitle} onChange={this.titleChange} onKeyPress={this.hitEnter} />
+          </div>
+          <div className="col-sm-2">
+            <button className="btn btn-primary btn-add" onClick={this.createTodo}>Add</button>
+          </div>
+        </div>
+        <div className="row todo-list">{todosHtml}</div>
+      </div>
     );
   },
-  removeHandlers: function(){
-    this.$el.find('.btn-add').off();
-    this.$el.find('.add-input').off();    
+  createTodo: function(){
+    // get new title
+    var title = this.state.newTitle;
+    // clear the text box
+    this.setState({ newTitle: ''});
+    // tell the controller to add a todo
+    this.props.controller.addTodo(title);
   },
-  // adds the todo (don't confuse with function of same name in model)
-  addTodo: function(){ 
-    var newTitle = this.$el.find('.add-input').val();
-    this.$el.find('.add-input').val('');
-    this.controller.addTodo(newTitle);
+  titleChange: function(event){
+    this.setState({
+      newTitle: event.target.value
+    });
   },
-  addKeypress: function(event){
-    var newTitle = this.$el.find('.add-input').val();
-    this.controller.addKeypress(event, newTitle);
+  hitEnter: function(event){
+    if (event.which === 13) {
+      this.createTodo();
+    }
   }
 });
 
-module.exports = TodoView;
-
-
-
-
+module.exports = todoView;
 

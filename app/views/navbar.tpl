@@ -18,6 +18,9 @@
     <a href="/pages/d3example.html">D3</a>
   </li>
   <li>
+    <a href="/pages/d3PieChart.html">D3 Pie Chart</a>
+  </li>
+  <li>
     <a href="/pages/threeExample.html">Three</a>
   </li>
   <li>
