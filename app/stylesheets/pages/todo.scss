@@ -1,6 +1,28 @@
 /*.blah {
  width: 100%;
 }*/
+
+.info-box {
+  /*width: 50%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+
+  & > p {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #555555;
+    width: 40%;
+    text-align: center;
+  }
+}
+/*.info-box p {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #555555;
+}*/
+
 .todo-container {
   width: 650px;
   min-width: 650px;
@@ -66,5 +88,10 @@
   padding-right: 10px;
   font-size: 30px;
   outline: none;
+}
+
+/* overlay to hide unstyled html */
+#loadOverlay{
+  display: none;
 }
 

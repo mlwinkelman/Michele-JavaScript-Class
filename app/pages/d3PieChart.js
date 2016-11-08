@@ -15,7 +15,7 @@ var app = {
           'font': 'Open Sans',
         },
         'subtitle': {
-          'text': 'A full pie chart to show off label collision detection and resolution.',
+          'text': 'An interactive donut chart using the D3.js library and d3pie.',
           'color': '#999999',
           'fontSize': 14,
           'font': 'open sans'
