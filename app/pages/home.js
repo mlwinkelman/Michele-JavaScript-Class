@@ -19,7 +19,7 @@ var app = {
     $('.main-container').fadeIn(1000, function(){
       // hide preloader is the callback or "complete" argument of the fadeIn function
       $('.preloader').addClass('hidden'); 
-    }).removeClass('hidden');
+    }).css({display:'block'});
     
 
     // hover developer/designer

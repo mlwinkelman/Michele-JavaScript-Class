@@ -13,7 +13,7 @@ import navbar from './components/navbar';
 // import smartFixedNavigation from './components/smartFixedNavigation';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
-// import d3PieChart from './pages/d3PieChart';
+import d3PieChart from './pages/d3PieChart';
 import threeExample from './pages/threeExample';
 import bbtodoController from './pages/bb_todo';
 import rTodoController from './pages/r_todo';
@@ -58,9 +58,9 @@ $(function(){
   case '/pages/d3example.html':
     d3example.init();
     break;
-  // case '/pages/d3PieChart.html':
-  //   d3PieChart.init();
-  //   break;
+  case '/pages/d3PieChart.html':
+    d3PieChart.init();
+    break;
   case '/pages/threeExample.html':
     threeExample.init();
     break;

@@ -7,7 +7,7 @@ var app = {
   },
   render: function(){
     //do all the visual stuff
-    var pie = new d3pie('pieChart', {
+    new d3pie('pieChart', {
       'header': {
         'title': {
           'text': 'Lots of Programming Languages',
