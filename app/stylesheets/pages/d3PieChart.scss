@@ -1,26 +1,23 @@
-.backdrop  {
-        background-color: #000000;
-        margin: 0px;
-        overflow: hidden;
-      }
-a {
-  color: #0078ff;
-}
 
-.info-box-three {
+.info-box {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-  background-color: #000000;
-}
-.info-box-three p {
+
+  & > p {
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
-    /*color: #555555;*/
-    color: #9999FF;
-    width: 40%;
+    color: #555555;
+    width: 50%;
     text-align: center;
+  }
+}
+
+#pieChart {
+  display: block;
+  position: absolute; 
+  left:25%; top:25%;
 }
 
 /* overlay to hide unstyled html */

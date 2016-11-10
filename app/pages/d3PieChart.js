@@ -15,7 +15,7 @@ var app = {
           'font': 'Open Sans',
         },
         'subtitle': {
-          'text': 'An interactive donut chart using the D3.js library and d3pie.',
+          'text': 'Hover over or click a section!',
           'color': '#999999',
           'fontSize': 14,
           'font': 'open sans'
