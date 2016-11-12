@@ -41,13 +41,26 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
 */
-jQuery.easing.jswing = jQuery.easing.swing;
-jQuery.extend(jQuery.easing, {
+
+// if (typeof(jQuery) === 'undefined') {
+//   var jQuery;
+//   // Check if require is a defined function.
+//   if (typeof(require) === 'function') {
+//     jQuery = $easing = require('jQuery');
+//   // Else use the dollar sign alias.
+//   } else {
+//     jQuery = $easing;
+//   }
+// };
+
+(function($, undefined) {
+// <easing plugin here>
+  $.easing.jswing = $.easing.swing;
+  $.extend($.easing, {
     def: "easeOutQuad",
-    // swing: function(e, f, a, h, g) {
-    //   debugger;
-    //     return jQuery.easing[jQuery.easing.def](e, f, a, h, g)
-    // },
+    swing: function(e, f, a, h, g) {
+        return $.easing[$.easing.def](e, f, a, h, g)
+    },
     easeInQuad: function(e, f, a, h, g) {
         return h * (f /= g) * f + a
     },
@@ -223,7 +236,7 @@ jQuery.extend(jQuery.easing, {
         return i / 2 * ((f -= 2) * f * (((g *= (1.525)) + 1) * f + g) + 2) + a
     },
     easeInBounce: function(e, f, a, h, g) {
-        return h - jQuery.easing.easeOutBounce(e, g - f, 0, h, g) + a
+        return h - $.easing.easeOutBounce(e, g - f, 0, h, g) + a
     },
     easeOutBounce: function(e, f, a, h, g) {
         if ((f /= g) < (1 / 2.75)) {
@@ -242,8 +255,12 @@ jQuery.extend(jQuery.easing, {
     },
     easeInOutBounce: function(e, f, a, h, g) {
         if (f < g / 2) {
-            return jQuery.easing.easeInBounce(e, f * 2, 0, h, g) * 0.5 + a
+            return $.easing.easeInBounce(e, f * 2, 0, h, g) * 0.5 + a
         }
-        return jQuery.easing.easeOutBounce(e, f * 2 - g, 0, h, g) * 0.5 + h * 0.5 + a
+        return $.easing.easeOutBounce(e, f * 2 - g, 0, h, g) * 0.5 + h * 0.5 + a
     }
 });
+
+}) (jQuery);
+
+

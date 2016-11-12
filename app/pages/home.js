@@ -3,6 +3,15 @@ var $ = window.$;
 var app = {
 
   init: function(){
+    // workaround for chrome bug where <a> tags don't work with #
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isChrome) {
+      setTimeout(function () {
+        var hash = window.location.hash;
+        window.location.hash = '';
+        window.location.hash = hash;
+      }, 300);
+    }
 
    // preload background image, then call render function
     var $bgImage = new Image();
@@ -40,7 +49,7 @@ var app = {
         if (target.length) {
           $('html, body').animate({
             scrollTop: target.offset().top
-          }, 1000);
+          }, 1250, 'easeInOutExpo');
           return false;
         }
       }

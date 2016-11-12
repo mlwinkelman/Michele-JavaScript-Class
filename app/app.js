@@ -9,7 +9,8 @@ require('bootstrap');
 // // import our styles
 import './stylesheets/base.scss';
 import home from './pages/home';
-import navbar from './components/navbar';
+// import navbar from './components/navbar';
+import topNavbar from './components/topNavbar';
 // import smartFixedNavigation from './components/smartFixedNavigation';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
@@ -33,7 +34,10 @@ $(function(){
   console.log('%c App Started', 'color:green');
 
 // launch navbar
-  navbar.init();
+  // navbar.init();
+
+// launch topNavbar
+  topNavbar.init();
 
 // launch smartFixedNav
   // smartFixedNavigation.init();
@@ -52,9 +56,9 @@ $(function(){
   case '/pages/todo.html':
     todoController.init();
     break;
-  case '/pages/multimedia.html':
-    console.log('multimedia page started');
-    break;
+  // case '/pages/multimedia.html':
+  //   console.log('multimedia page started');
+  //   break;
   case '/pages/d3example.html':
     d3example.init();
     break;

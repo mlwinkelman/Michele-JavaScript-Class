@@ -69,17 +69,17 @@ section h3.print-portfolio-section {
   /*text-decoration: none;*/
 }
 
-#portfolio .portfolio-item {
+section .portfolio-item {
   margin: 0 0 25px;
   right: 0;
 }
-#portfolio .portfolio-item .portfolio-link {
+section .portfolio-item .portfolio-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+section .portfolio-item .portfolio-link .portfolio-hover {
   background: rgba(142, 142, 56, 0.8);
   position: absolute;
   width: 100%;
@@ -89,10 +89,10 @@ section h3.print-portfolio-section {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+section .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -103,34 +103,34 @@ section h3.print-portfolio-section {
   color: white;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
   margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+section .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
   margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+section .portfolio-item .portfolio-caption {
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
   text-align: center;
   padding: 25px;
 }
-#portfolio .portfolio-item .portfolio-caption h4 {
+section .portfolio-item .portfolio-caption h4 {
   text-transform: none;
   margin: 0;
 }
-#portfolio .portfolio-item .portfolio-caption p {
+section .portfolio-item .portfolio-caption p {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
-#portfolio * {
+section * {
   z-index: 2;
 }
 @media (min-width: 767px) {
@@ -178,9 +178,9 @@ section h3.print-portfolio-section {
 .web-portfolio-link:hover {
     box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.2);
 }*/
-.print-portfolio-link {
+/*.print-portfolio-link {
   background-color: #838B8B;
 }
 .print-portfolio-link:hover {
     box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.2);
-}
+}*/

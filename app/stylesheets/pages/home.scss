@@ -127,7 +127,7 @@ h1 {
   color: white;
   outline: none;
 }
-.hvr-underline-from-center {
+/*.hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -152,14 +152,14 @@ h1 {
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
-}
+}*/
 
 /* ACTUALLY WILL BE PORTFOLIO LINKS */
-nav {
+/*nav {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
   text-align: left;
-}
+}*/
 
 /* MIDDER */
 .midder {
@@ -177,6 +177,10 @@ nav {
   @media (max-width: 800px) {
     font-size: 1.25em;
   }
+}
+a.midder:hover {
+  color: white;
+  /*pointer: none;*/
 }
 
 /* ABOUT ME */
