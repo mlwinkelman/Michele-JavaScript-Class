@@ -1,6 +1,4 @@
-/*.blah {
- width: 100%;
-}*/
+
 
 .info-box-todo {
   display: flex;
@@ -13,23 +11,30 @@
     font-size: 15px;
     color: #555555;
     width: 40%;
+    @media (max-width: 800px) {
+      width: 80%;
+    }
     text-align: center;
   }
 }
 
 .todo-container {
   width: 650px;
-  min-width: 650px;
+  min-width: 300px;
   min-height: 175px;
   background-color: #c5c5d0;
   border-radius: 15px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto 100px;
+  /*margin-top: 50px;*/
   padding: 0px 20px 10px;
   font-family: 'Raleway', sans-serif;
-  /* add button */
-  /* edit button */
+  @media (max-width: 640px) {
+    width: 90vw;
+    padding: 0px 10px 5px;
+  }
 }
+
+
 .todo-container .title-row {
   text-align: center;
   font-weight: 200;
@@ -53,13 +58,25 @@
     text-decoration: line-through;
     color: #6a6880;
   }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 .todo-container .btn-primary {
   float: right;
-  width: 70px;
+  width: 80px;
   background-color: #6a6880;
   color: white;
   border-color: #6a6880;
+  @media (max-width: 540px) {
+    width: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (max-width: 400px) {
+    width: 50px;
+    min-width: 20px;
+  }
 }
 .todo-container .btn-primary:hover,
 .todo-container .btn-primary:focus,
@@ -75,15 +92,41 @@
   float: right;
   font-style: normal;
   color: #42424c;
-  width: 70px;
+  width: 80px;
   outline: none;
+  @media (max-width: 600px) {
+    width: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @media (max-width: 400px) {
+    width: 40px;
+    min-width: 20px;
+  }
+}
+.todo-title {
+  @media (max-width: 540px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .todo-container .close {
   padding-right: 10px;
   font-size: 30px;
   outline: none;
+  @media (max-width: 540px) {
+    padding-left: 5px;
+    /*padding-right: 2px;*/
+  }
 }
-
+@media (max-width: 540px) {
+  .col-shrink {
+    padding-right: 5px;
+  }
+  .col-shrink-left {
+    padding-left: 5px;
+  }
+  }
 /* overlay to hide unstyled html */
 #loadOverlay{
   display: none;

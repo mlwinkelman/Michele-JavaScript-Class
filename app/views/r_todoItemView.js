@@ -19,16 +19,16 @@ var ItemView = React.createClass({
     // returns rendered html
     return (
       <div className={baseClasses}>
-        <div className="col-sm-1">{this.props.item.id}</div>
+        <div className="col-sm-1 col-xs-1 col-shrink">{this.props.item.id}</div>
         { this.state.editing !== true && 
-          <div className="col-sm-7 todo-title">{this.props.item.title}</div>
+          <div className="col-sm-7 col-xs-7 todo-title">{this.props.item.title}</div>
         }
         { this.state.editing === true && 
-          <div className="col-sm-7 todo-title-edit">
+          <div className="col-sm-7 col-xs-7 todo-title-edit">
           <input className="title-edit-input" type="text" defaultValue={this.props.item.title} />
         </div>
         }
-        <div className="col-sm-1">
+        <div className="col-sm-1 col-xs-1 col-shrink col-shrink-left">
         { this.props.item.completed === 1 && // evaluates as an if statement
           <input type="checkbox" checked onChange={this.toggleCheckbox} />
         }
@@ -36,7 +36,7 @@ var ItemView = React.createClass({
           <input type="checkbox" onChange={this.toggleCheckbox} />
         }
         </div>
-        <div className="col-sm-2">
+        <div className="col-sm-2 col-xs-2 col-shrink col-shrink-left">
         {this.state.editing !== true &&
           <button className="btn btn-default edit" onClick={this.editTodo}>Edit</button>
         }
@@ -44,7 +44,7 @@ var ItemView = React.createClass({
           <button className="btn btn-primary save" onClick={this.saveTodo}>Save</button>
         } 
         </div>
-        <div className="col-sm-1">
+        <div className="col-sm-1 col-xs-1 col-shrink ">
           <button type="button" className="close" aria-label="Close" onClick={this.removeTodo} >
             <span aria-hidden="true">&times;</span>
           </button>

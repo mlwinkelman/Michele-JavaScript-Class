@@ -28,10 +28,10 @@ var todoView = React.createClass({
           </div>
         </div>
         <div className="row add-todo-row">
-          <div className="col-sm-10 col-xs-8">
+          <div className="col-sm-10 col-xs-10">
             <input type="text" className="form-control add-input" value={this.state.newTitle} onChange={this.titleChange} onKeyPress={this.hitEnter} />
           </div>
-          <div className="col-sm-2">
+          <div className="col-sm-2 col-xs-2">
             <button className="btn btn-primary btn-add" onClick={this.createTodo}>Add</button>
           </div>
         </div>
