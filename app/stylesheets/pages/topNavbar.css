@@ -25,7 +25,6 @@ a.active {*/
 .navbar-custom {
   background-color: #333333;
   opacity: .8;
-  /*background-color: #222222;*/
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
@@ -34,35 +33,31 @@ a.active {*/
   font-weight: 300;
   color: white;
 }
-.navbar-custom .navbar-brand:hover,
+/*.navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
+.navbar-custom .navbar-brand.active {*/
   /*color: #8E8E38;*/
   /*color: #6D868D;*/
-}
+/*}*/
 .navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-custom .navbar-toggle {
-  /*background-color: #fed136;*/
-  /*border-color: #fed136;*/
+  
   font-family: 'Open Sans', sans-serif;
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*text-transform: uppercase;*/
+  /*text-transform: lowercase;*/
   color: white;
   /*font-size: 16px;*/
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   color: white;
-  /*background-color: #fed136;*/
 }
 .navbar-custom .nav li a {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*text-transform: uppercase;*/
+  /*text-transform: lowercase;*/
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -108,8 +103,8 @@ ul.nav {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #65b7bd;
-  height: 2px;
+  background: #7AC5CD;
+  height: 1px;
   transition-property: left, right;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;

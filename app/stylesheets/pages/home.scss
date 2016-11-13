@@ -54,7 +54,7 @@ body {
   background-size: cover;
   height: 100vh;
   background-position-x: 50%;
-  background-position-y: center;
+  background-position-y: 60%;
   box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.1);
 }
 .name {
@@ -72,7 +72,33 @@ body {
   color: white;
   text-align: center;
 }
+.my-title {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: .5px;
+  @media (max-width: 800px) {
+    font-size: 1.25em;
+    margin-top: 50px;
+  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 70px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+/* HOVER EAT.SLEEP.CODE */
 .hover-text {
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: crosshair;
+}
+/* HOVER DEVELOPER */
+/*.hover-text {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
   text-transform: uppercase;
@@ -90,14 +116,14 @@ body {
   text-decoration: none;
   white-space: nowrap;
   cursor: crosshair;
-}
+}*/
 h1 {
   /*margin: 0;*/
   white-space: nowrap;
 }
 
 /* NAVIGATION */
-.home-nav {
+/*.home-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -113,7 +139,6 @@ h1 {
   text-align: right;
 }
 .home-nav ul {
-  /*height: auto;*/
   padding: 0px 10px;
   margin: 0px;
 }
@@ -126,40 +151,9 @@ h1 {
   text-decoration: none;
   color: white;
   outline: none;
-}
-/*.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #65b7bd;
-  height: 2px;
-  transition-property: left, right;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
 }*/
 
-/* ACTUALLY WILL BE PORTFOLIO LINKS */
-/*nav {
-  font-family: 'Open Sans', sans-serif;
-  position: absolute;
-  text-align: left;
-}*/
+
 
 /* MIDDER */
 .midder {
@@ -169,19 +163,18 @@ h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 2em;
   font-weight: 400;
-  /*color: #555555;*/
   color: white;
   margin: 0;
-  height: 150px;
+  height: 240px;
   background-color: #8E8E38;
+  padding-top: 40px;
   @media (max-width: 800px) {
-    font-size: 1.25em;
+    font-size: 1.5em;
+    height: 180px;
+    /*padding-top: 30px;*/
   }
 }
-a.midder:hover {
-  color: white;
-  /*pointer: none;*/
-}
+
 
 /* ABOUT ME */
 .flex-container {
@@ -191,7 +184,7 @@ a.midder:hover {
   /*padding: 45px 0 25px 0;*/
   padding: 100px 0 60px 0;
   @media (min-width: 768px) {
-    padding: 150px 0 100px 0;
+    padding: 80px 0 80px 0;
     width: 80%;
   }
   flex-direction: row;
@@ -208,11 +201,10 @@ a.midder:hover {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 300px;
-  /*font-family: 'Open Sans', sans-serif;*/
   font-size: 15px;
   line-height: 1.5em;
   @media (max-width: 800px) {
-    font-size: 15px;
+    font-size: 16px;
     padding-right: 0px;
   }
   color: #555555;

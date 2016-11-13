@@ -73,7 +73,8 @@ var app = {
  
 (function($){
   $.fn.textShake = function(time, step,  maintext, shaketext, afteraction){
-    var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz',
+    // var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
       el = $(this),
 
       shakeInterval = setInterval(function(){

@@ -6,7 +6,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span> Menu <span class="fa fa-bars"></span>
       </button>
-      <a href="#home"><p class="navbar-brand page-scroll name-small">michele | WINKELMAN</p></a>
+      <a href="#home"><p class="navbar-brand page-scroll name-small">m | W</p></a>
       <!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a> -->
     </div>
 
@@ -17,13 +17,16 @@
           <a href="#home"></a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#about">About</a>
+          <a class="page-scroll hvr-underline-from-center" href="#about">about</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#portfolio">Portfolio</a>
+          <a class="page-scroll hvr-underline-from-center" href="#portfolio">webPortfolio</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#contact-me">Contact</a>
+          <a class="page-scroll hvr-underline-from-center" href="#portfolio-print">designPortfolio</a>
+        </li>
+        <li>
+          <a class="page-scroll hvr-underline-from-center" href="#contact-me">contact</a>
         </li>
       </ul>
     </div>
