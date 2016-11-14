@@ -4,9 +4,11 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span> Menu <span class="fa fa-bars"></span>
+          <span class="sr-only">Toggle navigation</span> MENU <span class="fa fa-bars"></span>
       </button>
-      <a href="#home"><p class="navbar-brand page-scroll name-small">m | W</p></a>
+      <div class="navbar-collapse">
+        <a class="page-scroll home" href="/#home"><p class="navbar-brand name-small">m | W</p></a>
+      </div>
       <!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a> -->
     </div>
 
@@ -17,16 +19,16 @@
           <a href="#home"></a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#about">about</a>
+          <a class="page-scroll hvr-underline-from-center about" href="/#about">about</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#portfolio">webPortfolio</a>
+          <a class="page-scroll hvr-underline-from-center web-portfolio" href="/#portfolio">webPortfolio</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#portfolio-print">designPortfolio</a>
+          <a class="page-scroll hvr-underline-from-center design-portfolio" href="/#portfolio-design">designPortfolio</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center" href="#contact-me">contact</a>
+          <a class="page-scroll hvr-underline-from-center contact-me" href="/#contact-me">contact</a>
         </li>
       </ul>
     </div>

@@ -39,13 +39,17 @@ $(function(){
 // launch topNavbar
   topNavbar.init();
 
-// launch smartFixedNav
-  // smartFixedNavigation.init();
 
   // My First Router: which page are we on???
   switch(window.location.pathname){
   case '/':
     home.init();
+    // would my nav scroll-to for home page go here?
+    $('.about').attr('href', '#about');
+    $('.web-portfolio').attr('href', '#portfolio');
+    $('.design-portfolio').attr('href', '#portfolio-design');
+    $('.contact-me').attr('href', '#contact-me');
+    $('.home').attr('href', '#home');
     break;
   case '/pages/bb_todo.html':
     new bbtodoController(); // use backbone pattern

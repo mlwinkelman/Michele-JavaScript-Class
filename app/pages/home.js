@@ -31,7 +31,7 @@ var app = {
     }).css({display:'block'});
     
 
-    // hover developer/designer
+    // hover text
     $('.hover-text').hover(function(){
       $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
         // console.log('Do something.');
@@ -42,18 +42,18 @@ var app = {
       });
     });
     // smooth scroll to nav elements
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1250, 'easeInOutExpo');
-          return false;
-        }
-      }
-    });
+    // $('a[href*="#"]:not([href="#"])').click(function() {
+    //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    //     var target = $(this.hash);
+    //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    //     if (target.length) {
+    //       $('html, body').animate({
+    //         scrollTop: target.offset().top
+    //       }, 1250, 'easeInOutExpo');
+    //       return false;
+    //     }
+    //   }
+    // });
   
 
   }

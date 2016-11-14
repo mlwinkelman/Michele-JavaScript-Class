@@ -1,4 +1,6 @@
 var d3pie = window.d3pie;
+// var $ = window.$;
+// var d3 = window.d3;
 
 var app = {
 
@@ -7,6 +9,20 @@ var app = {
   },
   render: function(){
     //do all the visual stuff
+
+  // d3.select('svg').each(function () {
+  //   console.log('123');
+  //   $(this)[0].setAttribute('viewBox', '0 0 100 100');
+  // });
+  
+    // d3.select('#pieChart').append('svg')
+      // .attr('viewBox', '0, 0, 60, 55');
+      // .attr('preserveAspectRatio, 'xMinYMin');
+
+    // $('svg').each(function () { 
+    //   $(this)[0].setAttribute('viewBox', '0 0 100 100');
+    // });
+
     new d3pie('pieChart', {
       'header': {
         'title': {
@@ -221,6 +237,9 @@ var app = {
 
   }
 
+
 };
+
+
 
 module.exports = app;
