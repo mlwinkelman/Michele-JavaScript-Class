@@ -44,7 +44,6 @@ $(function(){
   switch(window.location.pathname){
   case '/':
     home.init();
-    // would my nav scroll-to for home page go here?
     $('.about').attr('href', '#about');
     $('.web-portfolio').attr('href', '#portfolio');
     $('.design-portfolio').attr('href', '#portfolio-design');
@@ -56,6 +55,9 @@ $(function(){
     break;
   case '/pages/r_todo.html':
     new rTodoController(); // use backbone pattern
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#555555');
+    // $('.navbar-default .navbar-brand:hover').css('color', '#8E8E38');
     break;
   case '/pages/todo.html':
     todoController.init();
@@ -68,6 +70,8 @@ $(function(){
     break;
   case '/pages/d3PieChart.html':
     d3PieChart.init();
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#555555');
     break;
   case '/pages/threeExample.html':
     threeExample.init();

@@ -7,13 +7,14 @@ a.active {
   outline: none;
 }
 
-.collapse {
-  /*padding-bottom: 10px;*/
-  /*margin-bottom: 10px;*/
-}
+
 .navbar-collapse a {
   width: fit-content;
+  /*padding-bottom: 10px;*/
 }
+/*.collapse.in li {
+  text-align: center;
+}*/
 .navbar-custom {
   background-color: #333333;
   opacity: .8;
@@ -23,7 +24,12 @@ a.active {
   font-family: 'Oswald', sans-serif;
   /*font-size: 24px;*/
   font-weight: 300;
-  color: white;
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+    color: #8E8E38;
+    background-color: transparent;
 }
 .navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -46,6 +52,7 @@ a.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
+  opacity: 1;
 
 }
 .navbar-custom .nav li a:hover,
@@ -54,8 +61,9 @@ a.active {
   outline: none;
 }
 .navbar-nav > li > a {
-  margin: 0 15px;
+  margin: 0 20px;
   padding: 15px 1px 1px 1px;
+
 }
 .navbar-custom .navbar-nav > .active > a {
   color: white;
@@ -64,10 +72,13 @@ a.active {
 .navbar-custom .navbar-nav > .active > a:focus {
   color: white;
 }
-
-ul.nav {
-  padding: 0;
+.navbar-brand {
+  /*padding-left: 0;*/
 }
+
+/*ul.nav {
+  padding: 0;
+}*/
 
 .hvr-underline-from-center {
   vertical-align: middle;
