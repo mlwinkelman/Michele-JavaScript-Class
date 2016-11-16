@@ -10,11 +10,8 @@ a.active {
 
 .navbar-collapse a {
   width: fit-content;
-  /*padding-bottom: 10px;*/
 }
-/*.collapse.in li {
-  text-align: center;
-}*/
+
 .navbar-custom {
   background-color: #333333;
   opacity: .8;
@@ -35,9 +32,7 @@ a.active {
   border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-custom .navbar-toggle {
-  
   font-family: 'Open Sans', sans-serif;
-  /*text-transform: lowercase;*/
   color: white;
   /*font-size: 16px;*/
 }
@@ -72,13 +67,6 @@ a.active {
 .navbar-custom .navbar-nav > .active > a:focus {
   color: white;
 }
-.navbar-brand {
-  /*padding-left: 0;*/
-}
-
-/*ul.nav {
-  padding: 0;
-}*/
 
 .hvr-underline-from-center {
   vertical-align: middle;
@@ -121,6 +109,7 @@ a.active {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    color: #fff;
   }
 }
 @media (min-width: 768px) {
@@ -130,5 +119,6 @@ a.active {
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 2em;
+    color: #fff;
   }
 }

@@ -10,6 +10,12 @@ var app = {
   render: function(){
     //do all the visual stuff
 
+
+    // var windowHeight = $(window).height();
+    // var infoBoxHeight = $('.info-box').height();
+    // var availableSpace = windowHeight - infoBoxHeight;
+    // if (availableSpace < 100px)
+
   // d3.select('svg').each(function () {
   //   console.log('123');
   //   $(this)[0].setAttribute('viewBox', '0 0 100 100');
@@ -45,8 +51,8 @@ var app = {
         'location': 'bottom-left'
       },
       'size': {
-        'canvasHeight': 600,
-        'canvasWidth': 700,
+        'canvasHeight': 550,
+        'canvasWidth': 600,
         'pieInnerRadius': '26%',
         'pieOuterRadius': '90%'
       },
@@ -240,6 +246,9 @@ var app = {
 
 };
 
-
+// d3.select('svg').each(function () {
+//   alert('123');
+//   $(this)[0].setAttribute('viewBox', '0 0 100 100');
+// });
 
 module.exports = app;

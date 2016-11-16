@@ -11,7 +11,6 @@ import './stylesheets/base.scss';
 import home from './pages/home';
 // import navbar from './components/navbar';
 import topNavbar from './components/topNavbar';
-// import smartFixedNavigation from './components/smartFixedNavigation';
 import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import d3PieChart from './pages/d3PieChart';
@@ -55,9 +54,9 @@ $(function(){
     break;
   case '/pages/r_todo.html':
     new rTodoController(); // use backbone pattern
+    // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
     $('.navbar-custom .navbar-brand').css('color', '#555555');
-    // $('.navbar-default .navbar-brand:hover').css('color', '#8E8E38');
     break;
   case '/pages/todo.html':
     todoController.init();
@@ -70,6 +69,7 @@ $(function(){
     break;
   case '/pages/d3PieChart.html':
     d3PieChart.init();
+    // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
     $('.navbar-custom .navbar-brand').css('color', '#555555');
     break;

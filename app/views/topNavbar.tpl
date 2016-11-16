@@ -15,9 +15,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
+        <!-- <li class="hidden">
           <a href="#home"></a>
-        </li>
+        </li> -->
         <li>
           <a class="page-scroll hvr-underline-from-center about" href="/#about">about</a>
         </li>

@@ -21,6 +21,9 @@ a {
     color: #9999FF;
     width: 40%;
     text-align: center;
+    @media (max-width: 800px) {
+      width: 90%;
+    }
 }
 
 /* overlay to hide unstyled html */
