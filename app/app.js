@@ -15,6 +15,7 @@ import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import d3PieChart from './pages/d3PieChart';
 import threeExample from './pages/threeExample';
+import randomColors from './pages/randomColors';
 import bbtodoController from './pages/bb_todo';
 import rTodoController from './pages/r_todo';
 import photoSearchController from './pages/photoSearch';
@@ -61,9 +62,12 @@ $(function(){
   case '/pages/todo.html':
     todoController.init();
     break;
-  // case '/pages/multimedia.html':
-  //   console.log('multimedia page started');
-  //   break;
+  case '/pages/randomColors.html':
+    randomColors.init();
+    // change nav to gray when background-color is white
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#555555');
+    break;
   case '/pages/d3example.html':
     d3example.init();
     break;
