@@ -1,4 +1,5 @@
-var $ = window.$;
+// var $ = window.$;
+// var Tipped = window.Tipped;
 
 var app = {
 
@@ -20,35 +21,27 @@ var app = {
       return color;
     }
 
-    // function print(message) {
-    //   document.write(message);
-    // }
     function print(message) {
       var outputDiv = document.getElementById('output');
       outputDiv.innerHTML = message; // similar to document.write
-      $('#output').css('width', '80vw');
+      // $('#output').css('width', '80vw');
     }
 
-    // // loop to create 10 divs filled with rgbColor
-    for (var i = 0; i < 128; i += 1) {
+    // // loop to create divs filled with rgbColor
+    for (var i = 0; i < 120; i += 1) {
       rgbColor = randomColor();
       html += '<span class="dot toolTip" style="background-color:' + rgbColor + '"></span>';
     }
     app.render();
     // prints the string to the browser
     print(html);
-    
+    // Tipped.create('.toolTip', randomColor, {});
   },
   render: function(){
 
 
     
     
-
-    // Tipped.create('.toolTip', randomColor, {
-      // behavior: 'custom-slow',
-      // skin: 'light'
-    // });
   }
 };
 

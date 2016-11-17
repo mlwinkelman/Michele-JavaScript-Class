@@ -1,17 +1,31 @@
-/*.random-colors-container {*/
+.random-colors-container {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  /*overflow-y: hidden;*/
+}
     
   #output {
     background-color: #fff;
-    /*max-width: 1280px;*/
-    /*margin: 50px auto;*/
-    /*margin-top: 20px;*/
-    position: relative;
-    top: 100px;
-    left: 100px;
-    width: 80vw;
-    /*padding: 30px;*/
-    /*background-color: white;*/
-    /*border-radius: 15px;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    /*position: relative;*/
+    /*top: 100px;*/
+    height: 60vh;
+    /*scroll-behavior: none;*/
+    /*overflow-y: hidden;*/
+    width: 100vw;
   }
   
   
@@ -19,18 +33,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding-bottom: 30px;
+    padding-top: 100px;
+    /*padding-bottom: 10px;*/
+    position: relative;
+    width: 50%;
+    /*@media (max-width: 800px) {
+      width: 90vw;
+    }*/
+  }
 
-    & > p {
-      font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.5em;
-      color: #555555;
-      font-weight: 400;
-      width: 70vw;
-      text-align: center;
-    }
+  .info-box-colors p {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #555555;
+    text-align: center;
+    letter-spacing: 0;
+    font-weight: normal;
+    padding-bottom: 10px;
   }
 
   .dot {
@@ -41,11 +60,41 @@
     margin: 5px;
   }
 
-/*}*/
+  /*Bootstrap button outline override*/
+.btn-secondary {
+  width: 150px;
+  text-align: center;
+  background-color: #8E8E38;
+  padding: 12px 22px;
+  margin: 10px 20px;
+  transition: all .5s;
+  border-radius: 24px;
+  outline: none;
+}
+.btn-secondary {
+  color: #fff;
+  outline: none;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #7AC5CD;
+  outline: none;
+}
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:hover {
+  outline: none !important;
+}
 
-/*#loadOverlay{
-  display: none;
+/*.toolTip {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  font-weight: bolder;
 }*/
+
+#loadOverlay{
+  display: none;
+}
 
 
 

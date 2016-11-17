@@ -32,6 +32,7 @@ var app = {
         switch(window.location.pathname){
         case '/pages/r_todo.html':
         case '/pages/d3PieChart.html':
+        case '/pages/randomColors.html':
           // changes anchors back to gray
           $('.navbar-custom .nav li a').css('color', '#555555');
           $('.navbar-custom .navbar-brand').css('color', '#555555');
