@@ -1,4 +1,4 @@
-// var $ = window.$;
+var $ = window.$;
 // var Tipped = window.Tipped;
 
 var app = {
@@ -38,8 +38,13 @@ var app = {
     // Tipped.create('.toolTip', randomColor, {});
   },
   render: function(){
+    $('.main-container').fadeIn(1000, function(){
+      // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
+      // $('#output').addClass('ready');
+    }).css({display:'block'});
 
-
+    
+    
     
     
   }

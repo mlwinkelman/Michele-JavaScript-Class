@@ -33,9 +33,9 @@ var app = {
         case '/pages/r_todo.html':
         case '/pages/d3PieChart.html':
         case '/pages/randomColors.html':
-          // changes anchors back to gray
+          // changes anchors back to gray in case screen is expanded to non-mobile
           $('.navbar-custom .nav li a').css('color', '#555555');
-          $('.navbar-custom .navbar-brand').css('color', '#555555');
+          $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
           break;
         }
       });

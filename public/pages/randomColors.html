@@ -18,15 +18,18 @@
   <body class="toolTip">
     <!-- overlay to hide unstyled html -->
     <div id="loadOverlay" style="background-color:white; position:absolute; top:0px; left:0px; bottom:0px; right:0px; z-index:2000;"></div>
-    <nav></nav>
-    <div class="random-colors-container">
-      <div class="info-box-colors">
-        <p>JavaScript practice creating a random color generator. Click the button to see a new set of colors!</p>
+    <div class="main-container" style="display:none;">
+      <nav></nav>
+      <div class="random-colors-container">
+        <div class="info-box-colors">
+          <h3 class="center-icons-titles">randomColorGenerator</h3>
+          <p>A JavaScript challenge to create a random color generator. Click the button to see a new set of colors!</p>
+        </div>
+        <row>
+          <input type="button" class="btn btn-secondary btn-outline col-sm-2" value="Get New Colors" onClick="history.go(0)">
+        </row>
+        <div id="output"></div>
       </div>
-      <row>
-        <input type="button" class="btn btn-secondary btn-outline col-sm-2" value="Get New Colors" onClick="history.go(0)">
-      </row>
-      <div id="output"></div>
     </div>
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">

@@ -25,11 +25,6 @@ import photoSearchController from './pages/photoSearch';
 $(function(){
 
 
-// $.onreadystatechange(function(){ 
-  // if($.readyState == 'loaded' || $.readyState == 'complete') {
-      // call code to execute here.
-
-
   // Kick off the app!
   console.log('%c App Started', 'color:green');
 
@@ -57,7 +52,7 @@ $(function(){
     new rTodoController(); // use backbone pattern
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
-    $('.navbar-custom .navbar-brand').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
     break;
   case '/pages/todo.html':
     todoController.init();
@@ -66,7 +61,7 @@ $(function(){
     randomColors.init();
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
-    $('.navbar-custom .navbar-brand').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
     break;
   case '/pages/d3example.html':
     d3example.init();
@@ -75,7 +70,7 @@ $(function(){
     d3PieChart.init();
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
-    $('.navbar-custom .navbar-brand').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
     break;
   case '/pages/threeExample.html':
     threeExample.init();

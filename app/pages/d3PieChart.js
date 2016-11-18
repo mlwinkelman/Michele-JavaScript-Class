@@ -31,17 +31,17 @@ var app = {
 
     new d3pie('pieChart', {
       'header': {
-        'title': {
-          'text': 'Programming Languages',
-          'fontSize': 24,
-          'font': 'Open Sans',
-        },
-        'subtitle': {
-          'text': 'Hover over or click a section!',
-          'color': '#999999',
-          'fontSize': 14,
-          'font': 'open sans'
-        },
+        // 'title': {
+        //   'text': 'Programming Languages',
+        //   'fontSize': 24,
+        //   'font': 'Open Sans',
+        // },
+        // 'subtitle': {
+        //   'text': 'Hover over or click a section!',
+        //   'color': '#999999',
+        //   'fontSize': 14,
+        //   'font': 'open sans'
+        // },
         'titleSubtitlePadding': 9
       },
       'footer': {
@@ -51,8 +51,8 @@ var app = {
         'location': 'bottom-left'
       },
       'size': {
-        'canvasHeight': 550,
-        'canvasWidth': 600,
+        'canvasHeight': 450,
+        'canvasWidth': 520,
         'pieInnerRadius': '26%',
         'pieOuterRadius': '90%'
       },

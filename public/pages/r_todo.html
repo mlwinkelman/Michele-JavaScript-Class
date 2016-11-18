@@ -17,11 +17,16 @@
   <body>
     <!-- overlay to hide unstyled html -->
     <div id="loadOverlay" style="background-color:white; position:absolute; top:0px; left:0px; bottom:0px; right:0px; z-index:2000;"></div>
-    <nav></nav>
-    <div class="info-box-todo">
-      <p>During the course of my 13-week JavaScript bootcamp, our class built a todo app using several different libraries and frameworks. Our first build used jQuery, our second, Backbone, and we refactored a third time using React. We used the MVC design pattern throughout each iteration.</p>
+    <div class="main-container" style="display:none;">
+      <nav></nav>
+      <div class="todo-header-container">
+        <div class="info-box-todo">
+          <h3 class="center-icons-titles">todoApp</h3>
+          <p>During the course of my 13-week front-end development and JavaScript bootcamp, our class built a todo app using several different libraries and frameworks. Our first build used jQuery, our second, Backbone, and we refactored a third time using React. We used the MVC design pattern throughout each iteration.</p>
+        </div>
+        <main class="todo-container"></main>
+      </div>
     </div>
-    <main class="todo-container"></main>
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
     <script src="/dist/app.js"></script> 

@@ -1,3 +1,5 @@
+
+
 .random-colors-container {
   display:flex;
   flex-direction: column;
@@ -6,62 +8,60 @@
   align-content: flex-start;
   align-items: center;
   position: absolute;
-  top: 50px;
-  /*overflow-y: hidden;*/
+  top: 30px;
 }
-    
-  #output {
-    background-color: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    /*position: relative;*/
-    /*top: 100px;*/
-    height: 60vh;
-    /*scroll-behavior: none;*/
-    /*overflow-y: hidden;*/
-    width: 100vw;
-  }
-  
-  
-  .info-box-colors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    /*padding-bottom: 10px;*/
-    position: relative;
-    width: 50%;
-    /*@media (max-width: 800px) {
-      width: 90vw;
-    }*/
-  }
 
-  .info-box-colors p {
-    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #555555;
-    text-align: center;
-    letter-spacing: 0;
-    font-weight: normal;
-    padding-bottom: 10px;
-  }
+/*div.ready {
+  transform: translateY(0px);
+}*/
 
-  .dot {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 5px;
-  }
+#output {
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  height: 60vh;
+  width: 100vw;
+ /* transform: translateY(10px);
+  transition: transform 1s;*/
+}
+
+  
+.info-box-colors {
+  padding-top: 100px;
+  width: 90%;
+}
+.info-box-colors > .center-icons-titles {
+  padding-right: 0;
+}
+
+.info-box-colors p {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #555555;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: normal;
+  padding-bottom: 10px;
+  /*width: 500px;*/
+}
+
+.dot {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5px;
+}
 
   /*Bootstrap button outline override*/
 .btn-secondary {
+  margin-left: -5px;
   width: 150px;
   text-align: center;
   background-color: #8E8E38;
@@ -77,7 +77,8 @@
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #7AC5CD;
+  background-color: #8E8E38;
+  opacity: .5;
   outline: none;
 }
 .btn-secondary:focus,

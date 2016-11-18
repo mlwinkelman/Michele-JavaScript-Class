@@ -1,4 +1,5 @@
 // View
+var $ = window.$;
 
 import React from 'react';
 import TodoItemView from './r_todoItemView';
@@ -14,6 +15,11 @@ var todoView = React.createClass({
     controller: React.PropTypes.object.isRequired
   },
   render: function(){
+    $('.main-container').fadeIn(1000, function(){
+      // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
+      // $('#output').addClass('ready');
+    }).css({display:'block'});
+
     var controller = this.props.controller;
     // map always returns an array with same number of items as original
     var todosHtml = this.props.todos.map(function(todo, index){

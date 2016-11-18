@@ -19,14 +19,15 @@ a.active {
 }
 .navbar-custom .navbar-brand {
   font-family: 'Oswald', sans-serif;
-  /*font-size: 24px;*/
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
+  opacity: 1;
 }
 .navbar-default .navbar-brand:focus, 
 .navbar-default .navbar-brand:hover {
-    color: #8E8E38;
-    background-color: transparent;
+  color: #8E8E38;
+  opacity: 1;
+  background-color: transparent;
 }
 .navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -34,7 +35,6 @@ a.active {
 .navbar-custom .navbar-toggle {
   font-family: 'Open Sans', sans-serif;
   color: white;
-  /*font-size: 16px;*/
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
@@ -43,7 +43,6 @@ a.active {
 .navbar-custom .nav li a {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  /*text-transform: lowercase;*/
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
@@ -116,7 +115,17 @@ a.active {
     background-color: #333333;
     padding: 1px 0;
   }
+  .navbar-custom.affix .nav li a {
+    color: white !important;
+  }
   .navbar-custom.affix .navbar-brand {
     font-size: 2em;
+    /*color: white !important;*/
   }
 }
+@media (min-width: 768px) {
+  .navbar-custom.affix .navbar-brand:hover {
+    color: #8E8E38 !important;
+  }
+}
+

@@ -1,21 +1,32 @@
-
+.todo-header-container {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+}
 
 .info-box-todo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 150px;
-
-  & > p {
-    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #555555;
-    width: 40%;
-    @media (max-width: 800px) {
-      width: 80%;
-    }
-    text-align: center;
+  padding-top: 100px;
+  width: 55%;
+  @media (max-width: 768px) {
+    width: 90%;
   }
+}
+.info-box-todo > .center-icons-titles {
+    padding-right: 0;
+  }
+.info-box-todo p {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #555555;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: normal;
+  padding-bottom: 10px;
 }
 
 .todo-container {
