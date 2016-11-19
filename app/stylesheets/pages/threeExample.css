@@ -1,29 +1,47 @@
 .backdrop  {
-        background-color: #000000;
-        margin: 0px;
-        overflow: hidden;
-      }
+  background-color: #000000;
+  margin: 0px;
+  overflow: hidden;
+}
 a {
   color: #0078ff;
 }
 
-.info-box-three {
-  display: flex;
-  justify-content: center;
+.three-container {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
   align-items: center;
-  padding-top: 100px;
-  background-color: #000000;
+  background-color: transparent;
+  position: absolute;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
 }
+
+.info-box-three {
+  background-color: transparent;
+  padding-top: 100px;
+  width: 60%;
+  
+}
+.info-box-three > .center-icons-titles {
+  padding-right: 0;
+  color: #9999FF;
+}
+
 .info-box-three p {
-    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    /*color: #555555;*/
-    color: #9999FF;
-    width: 40%;
-    text-align: center;
-    @media (max-width: 800px) {
-      width: 90%;
-    }
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #9999FF;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: normal;
+  padding-bottom: 10px;
 }
 
 /* overlay to hide unstyled html */
