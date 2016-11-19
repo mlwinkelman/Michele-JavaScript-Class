@@ -15,9 +15,9 @@ a {
   align-content: center;
   align-items: center;
   background-color: transparent;
-  position: absolute;
+  position: relative;
   padding-top: 30px;
-  padding-bottom: 100px;
+  /*padding-bottom: 100px;*/
   left: 50%;
   transform: translate(-50%);
   width: 90%;
