@@ -3,7 +3,7 @@
 
 ## whatIDo
 
-I am a designer pursuing a new career as a developer and am currently enrolled in a 3-month immersive JavaScript bootcamp. I am excited to leverage my 10+ years' experience in graphic design as I transition into front-end web development.   
+I am a designer pursuing a new career as a developer and have recently completed a 3-month immersive JavaScript bootcamp. I am excited to leverage my 10+ years' experience in graphic design as I transition into front-end web development.   
 
 ## whyILoveIt
 
@@ -11,7 +11,7 @@ I have always been interested in computers and I love the blend of the technical
 
 ## howIGotHere
 
-Although I have a B.S. in apparel design, I taught myself graphic design and worked in publishing and print for many years. I got my feet wet in web design and learned basic HTML and CSS while building my own self-promotional website for freelance work. But I'm now really learning how to code at the DaVinci Institute in Westminster, CO as well as through supplemental online courses from Treehouse, Codecademy, and others. I am on the lookout for new opportunities so please contact me at mlwinkelman@gmail.com.
+Although I earned a B.S. in apparel and textile design, I taught myself graphic design and worked in publishing and print for many years. Back then, I got my feet wet in web design and learned basic HTML and CSS while building my own self-promotional website. But recently I've fallen in love with the challenge of learning to code. I continue to grow my skills daily. I am on the lookout for new opportunities so please contact me at mlwinkelman@gmail.com.
 
 
 ## viewMyWork
@@ -20,7 +20,7 @@ Although I have a B.S. in apparel design, I taught myself graphic design and wor
 
 - [GitHub](https://github.com/mlwinkelman/Michele-JavaScript-Class)
 
-- [Heroku](https://coding-paradise.herokuapp.com/)
+- [Heroku](https://mwinkelman.herokuapp.com/)
 
 - [Graphic Design Work](https://mwdesignwork.wordpress.com/)
 
