@@ -11,10 +11,6 @@
   top: 30px;
 }
 
-/*div.ready {
-  transform: translateY(0px);
-}*/
-
 #output {
   background-color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -87,11 +83,6 @@
   outline: none !important;
 }
 
-/*.toolTip {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
-  font-weight: bolder;
-}*/
 
 #loadOverlay{
   display: none;

@@ -15,6 +15,7 @@ import todoController from './pages/todo';
 import d3example from './pages/d3example';
 import d3PieChart from './pages/d3PieChart';
 import threeExample from './pages/threeExample';
+import jsQuiz from './pages/jsQuiz';
 import randomColors from './pages/randomColors';
 import bbtodoController from './pages/bb_todo';
 import rTodoController from './pages/r_todo';
@@ -56,6 +57,9 @@ $(function(){
     break;
   case '/pages/todo.html':
     todoController.init();
+    break;
+  case '/pages/jsQuiz.html':
+    jsQuiz.init();
     break;
   case '/pages/randomColors.html':
     randomColors.init();

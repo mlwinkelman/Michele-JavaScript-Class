@@ -1,0 +1,134 @@
+
+
+.quiz-container {
+  background-color: #282828;
+}
+.photo-container-quiz a {
+  color: #fff;
+  text-decoration: none;
+}
+.photo-container-quiz a:focus, a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.photo-container-quiz {
+  /*background-image: url(https://images.unsplash.com/photo-1450542814732-e210d1b7b938?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);*/
+  background-image: url('/images/Background-Bridge.jpeg');
+  background-size: cover;
+  height: 100vh;
+  background-position-x: 50%;
+  background-position-y: center;
+  box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.5);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-container > h1 {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Lobster Two', cursive;
+  font-style: italic;
+  font-size: 5em;
+  line-height: 1.2em;
+  /*top: 80px;*/
+  /*width: 100%;*/
+  padding-bottom: 20px;
+  white-space: normal;
+  @media (max-width: 767px) {
+    font-size: 2.5em;
+    /*margin-top: 50px;*/
+  }
+  
+}
+
+/*Bootstrap button outline override*/
+.photo-container-quiz .btn-outline {
+  /*width: 140px;*/
+  font-family: 'Raleway', sans-serif;
+  background-color: transparent;
+  padding: 12px 22px;
+  margin: 10px 20px;
+  color: inherit;
+  transition: all .5s;
+  border: 1.5px solid #fff;
+  border-radius: 24px;
+  outline: none;
+
+}
+
+.photo-container-quiz .btn-secondary.btn-outline {
+    color: #fff;
+}
+
+.photo-container-quiz .btn-secondary:hover {
+  background-color: #FFDEAD;
+  color: #fff;
+}
+.photo-container-quiz .btn-secondary.btn-outline:hover {
+  color: #fff;
+}
+.photo-container-quiz .btn-secondary.btn-outline:focus {
+  outline: none;
+  color: #fff;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#quiz-output {
+  margin-top: 20px;
+  color: black;
+  position: relative;
+  padding: 30px;
+  background-color: white;
+  opacity: 0.5;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  border-radius: 15px;
+  
+}
+#quiz-output h2 {
+  font-size: 1.25em;
+  font-weight: bolder;
+  padding: 10px 0;
+  @media screen and (max-width: 767px) {
+    font-size: 1em !important;
+  }
+}
+#quiz-output > ol {
+  margin-left: 0;
+  /*margin: 0 0 20px 32px;*/
+  padding: 0;
+  list-style-type: none;
+}
+#quiz-output li::before {
+  content: counter(step-counter);
+  margin-right: 1px;
+}
+#quiz-output li {
+  color: black;
+  padding: 4px 0;
+  display: list-item;
+  width: 100%;
+  margin: 0;
+  counter-increment: step-counter;
+}
+
+/* overlay to hide unstyled html */
+#loadOverlay{
+  display: none;
+}
+
