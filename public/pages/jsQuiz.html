@@ -23,14 +23,13 @@
     <link rel="stylesheet" type="text/css" href="/dist/app.css" /> 
     <script src="/dist/modernizr-custom.js"></script>
   </head>
-  <!-- <body> -->
-  <body class="quiz-container">
+  <body>
     <!-- overlay to hide unstyled html -->
     <div id="loadOverlay" style="background-color:white; position:absolute; top:0px; left:0px; bottom:0px; right:0px; z-index:2000;"></div>
-    <div class="main-container" style="display:block;">
+    <div class="main-container" style="display:none;">
       <nav></nav>
       
-      <div class="photo-container-quiz quiz-container">
+      <div class="photo-container-quiz">
         <div class="flex-container container-fluid">
           <h1>Famous Landmarks Trivia Quiz</h1>
           <row class="button-row">
@@ -42,6 +41,7 @@
         </div>
       </div>
     </div>
+    <div class="background-gray"></div>
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>

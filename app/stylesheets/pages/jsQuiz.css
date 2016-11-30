@@ -1,7 +1,10 @@
 
 
-.quiz-container {
+.background-gray {
   background-color: #282828;
+  width: 100vw;
+  position: relative;
+
 }
 .photo-container-quiz a {
   color: #fff;
@@ -14,7 +17,7 @@
 
 .photo-container-quiz {
   /*background-image: url(https://images.unsplash.com/photo-1450542814732-e210d1b7b938?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);*/
-  background-image: url('/images/Background-Bridge.jpeg');
+  /*background-image: url('/images/Background-Bridge.jpeg');*/
   background-size: cover;
   height: 100vh;
   background-position-x: 50%;

@@ -4,6 +4,25 @@ var app = {
 
   init: function(){
 
+    // preload background image, then call render function
+    var $bgImage = new Image();
+    $bgImage.onload = function(){
+      app.render();
+    };
+    $bgImage.src = '/images/Background-Bridge.jpeg';
+    // app.render();
+    
+  },
+
+  render: function(){
+    // console.log('123');
+
+    //do all the visual stuff
+    $('.photo-container-quiz').css('background-image', 'url(/images/Background-Bridge.jpeg)');
+    $('.main-container').fadeIn(1500, function(){
+      // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
+    }).css({display:'block'});
+
     // two dimensional array
     var quizQuestions = [
       ['In which U.S. city is the Golden Gate Bridge located?', 'san francisco'],
@@ -61,21 +80,10 @@ var app = {
       html += '<h2>You got these questions wrong:</h2>';
       html += buildList(incorrectAnswers);
 
-      app.render();
       // prints the list of correct & incorrect answers to the browser
       print(html);
 
     });
-
-    
-  },
-  render: function(){
-    // console.log('123');
-    // //do all the visual stuff
-    // $('.main-container').fadeIn(1000, function(){
-    //   // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
-    // }).css({display:'block'});
-
 
   }
 
