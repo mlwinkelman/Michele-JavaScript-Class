@@ -10,17 +10,16 @@ var app = {
       app.render();
     };
     $bgImage.src = '/images/Background-Bridge.jpeg';
-    // app.render();
     
   },
 
   render: function(){
-    // console.log('123');
 
     //do all the visual stuff
     $('.photo-container-quiz').css('background-image', 'url(/images/Background-Bridge.jpeg)');
     $('.main-container').fadeIn(1500, function(){
       // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
+      $('.preloader').addClass('hidden');
     }).css({display:'block'});
 
     // two dimensional array
