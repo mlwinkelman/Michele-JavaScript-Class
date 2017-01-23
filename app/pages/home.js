@@ -27,22 +27,20 @@ var app = {
     $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
     $('.main-container').fadeIn(1000, function(){
       // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
-      $('.preloader').addClass('hidden'); 
+      $('.preloader').addClass('hidden');
     }).css({display:'block'});
-    
+
 
     // hover text
     $('.hover-text').hover(function(){
       $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
-        // console.log('Do something.');
       });
     },function(){
       $(this).textShake(500, 100, $(this).data('shaketext'), $(this).data('maintext'), function(){
-        // console.log('Do something again xD.');
       });
     });
-   
-  
+
+
 
   }
 };
@@ -58,7 +56,7 @@ var app = {
  *
  * Copyright (c) 2016 by Mogeli lortkipanidze
  */
- 
+
 (function($){
   $.fn.textShake = function(time, step,  maintext, shaketext, afteraction){
     var alphabet = 'abcdefghijklmnopqrstuvwxyz',
