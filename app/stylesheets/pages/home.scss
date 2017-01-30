@@ -441,7 +441,7 @@ blockquote:before {
 /* FOOTER */
 .footer-flex-container {
   /*background-image: url(/images/background-header2.jpeg);*/
-  background-image: url(/images/meibnpi1rc8-nathan-anderson.jpg);
+  background-image: url(/images/trees-background-meibnpi1rc8-nathan-anderson.jpg);
   background-size: cover;
   background-position: center 67%;
   font-family: 'Open Sans', sans-serif;
@@ -459,6 +459,7 @@ blockquote:before {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 300px;
+  opacity: 0.6;
 }
 .footer-info-container a {
   text-decoration: none;
@@ -473,11 +474,11 @@ blockquote:before {
   padding: 0;
 }
 .font-attribution p {
-  color: gray;
+  color: white;
 }
 .font-attribution a {
   text-decoration: none;
-  color: gray;
+  color: white;
 }
 
 /* overlay to hide unstyled html */
