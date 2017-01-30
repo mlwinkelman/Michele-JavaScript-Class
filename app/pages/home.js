@@ -18,13 +18,14 @@ var app = {
     $bgImage.onload = function(){
       app.render();
     };
-    $bgImage.src = '/images/background-header2.jpeg';
+    // $bgImage.src = '/images/background-header2.jpeg';
+    $bgImage.src = '/images/meibnpi1rc8-nathan-anderson.jpg';
     // $bgImage.src = '/images/Background-Road.jpeg';
 
   },
   render: function(){
     //do all the visual stuff
-    $('.photo-container').css('background-image', 'url(/images/background-header2.jpeg)');
+    $('.photo-container').css('background-image', 'url(/images/meibnpi1rc8-nathan-anderson.jpg)');
     $('.main-container').fadeIn(1000, function(){
       // display:'block' changes css style from display:none and is the callback or "complete" argument of the fadeIn function
       $('.preloader').addClass('hidden');
