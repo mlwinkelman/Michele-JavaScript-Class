@@ -8,47 +8,20 @@
     <meta name="description" content="">
     <title>michele | WINKELMAN</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700" rel="stylesheet">
-    <script src="https://use.fontawesome.com/2ee6b3c3a6.js"></script>
     <link rel="shortcut icon" href="/images/touch/touch-icon-57x57.png">
     <link rel="stylesheet" type="text/css" href="/dist/app.css" />
     <script src="/dist/modernizr-custom.js"></script>
   </head>
-  <body class="photo-search-container js-form-search form-search">
+  <body class="photo-search-container">
     <nav></nav>
     <main>
-    <!-- HEADER -->
-      <header class="island">
-        <h1>Flickr Photo Search</h1>
-        <!-- <form class="js-form-search form-search" action="/search" method="get" role="search"> -->
-          <label for="query">Search:</label>
-          <input class="search-input col-md-3" type="text" placeholder="Search" />
-          <!-- <input class="search-input" type="search" name="query" id="query" placeholder="Search" required /> -->
-          <!-- <input type="submit" value="Search" /> -->
-        <!-- </form> -->
-      </header>
-
-      <!-- GALLERY -->
-      <div class="island">
-        <div class="js-gallery gallery">
-          <img src="" class="js-gallery__image"/>
-          <button class="js-gallery__arrow--left gallery__arrow gallery__arrow--left">
-            <span class="visually-hidden">Previous photo</span>
-          </button>
-          <button class="js-gallery__arrow--right gallery__arrow gallery__arrow--right">
-            <span class="visually-hidden">Next photo</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- THUMBNAILS -->
-      <div class="island thumbnails">
-        <ul class="js-thumbnails__list thumbnails__list photo-list"></ul>
-        <ol class="js-thumbnails__pager thumbnails__pager"></ol>
-      </div>
-        
-        
+      <h3>flickrPhotoSearch</h3>
+      <input class="search-input col-md-12" type="text" placeholder="search" />
+      <ul class="photo-list"></ul>
     </main>
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
     <script src="/dist/app.js"></script>
   </body>
 </html>
