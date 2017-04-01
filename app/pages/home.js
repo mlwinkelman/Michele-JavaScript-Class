@@ -34,10 +34,10 @@ var app = {
 
     // hover text
     $('.hover-text').hover(function(){
-      $(this).textShake(500, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
+      $(this).textShake(700, 100, $(this).data('maintext'), $(this).data('shaketext'), function(){
       });
     },function(){
-      $(this).textShake(500, 100, $(this).data('shaketext'), $(this).data('maintext'), function(){
+      $(this).textShake(700, 100, $(this).data('shaketext'), $(this).data('maintext'), function(){
       });
     });
 
