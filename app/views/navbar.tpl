@@ -26,4 +26,7 @@
   <li>
     <a href="/pages/photoSearch.html">Photo Search</a>
   </li>
+  <li>
+    <a href="/pages/styleGuide.html">Style Guide</a>
+  </li>
 </ul>

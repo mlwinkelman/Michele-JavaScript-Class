@@ -1,0 +1,110 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.portfolio-item-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  padding: 100px 15px 50px;
+  /*padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 120px;*/
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.design-portfolio-titles{
+  color: #6D868D;
+  padding-bottom: 15px;
+  padding-right: 15px;
+   @media (max-width: 1139px) {
+    padding-right: 0;
+  }
+}
+
+.portfolio-item-wrapper ul {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin: 0 0 27px;
+  padding: 2px 0;
+}
+
+.portfolio-item-wrapper ul li {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  list-style: none;
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  /*font-weight: 700;*/
+  color: rgba(0,0,0,0.5) !important;
+  display: inline-block;
+}
+
+.portfolio-item-info {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #555555;
+  /*text-align: center;*/
+  letter-spacing: 0;
+  font-weight: normal;
+  padding-bottom: 10px;
+  /*padding-top: 100px;*/
+  /*width: 55%;*/
+}
+
+@media screen and (min-width: 768px) {
+
+  .portfolio-item-wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    width: 82%;
+    max-width: 1175px;
+    padding: 130px 15px 50px;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+
+  .portfolio-item-wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 50px;
+    width: 82%;
+    padding: 130px 15px 50px;
+  }
+
+}
+
+a.button {
+    color: #000000;
+    border: solid 1px #000000;
+    padding: 7px 25px 8px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.button-margin {
+  margin: 20px 0 40px;
+}
+
+.portfolio-item-info a:focus, .portfolio-item-info a:hover {
+    color: #6D868D;
+    /*text-decoration: none;*/
+}
+
+.project-tech {
+  font-size: 12px;
+}
+
+#loadOverlay{
+  display: none;
+}

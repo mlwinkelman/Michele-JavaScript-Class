@@ -20,6 +20,7 @@ import randomColors from './pages/randomColors';
 import bbtodoController from './pages/bb_todo';
 import rTodoController from './pages/r_todo';
 import photoSearchController from './pages/photoSearch';
+import styleGuide from './pages/styleGuide';
 // import multimediaController from './pages/multimedia';
 
 // on document load
@@ -82,6 +83,12 @@ $(function(){
   case '/pages/photoSearch.html':
     new photoSearchController(); // use backbone pattern
     break;
+  case '/pages/styleGuide.html':
+    styleGuide.init();
+    // change nav to gray when background-color is white
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
+    break;
   }
 
 
@@ -89,7 +96,7 @@ $(function(){
   console.log('Please hire me! mlwinkelman@gmail.com');
   console.log('=====================================');
 
-  // } 
+  // }
 
 
 });
