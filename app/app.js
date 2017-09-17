@@ -21,6 +21,7 @@ import bbtodoController from './pages/bb_todo';
 import rTodoController from './pages/r_todo';
 import photoSearchController from './pages/photoSearch';
 import styleGuide from './pages/styleGuide';
+import fpSurvivalGuide from './pages/fpSurvivalGuide';
 // import multimediaController from './pages/multimedia';
 
 // on document load
@@ -85,6 +86,12 @@ $(function(){
     break;
   case '/pages/styleGuide.html':
     styleGuide.init();
+    // change nav to gray when background-color is white
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
+    break;
+  case '/pages/fpSurvivalGuide.html':
+    fpSurvivalGuide.init();
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
     $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
