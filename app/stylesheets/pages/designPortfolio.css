@@ -52,7 +52,27 @@
   letter-spacing: 0;
   font-weight: normal;
   padding-bottom: 10px;
-  grid-row: span 4;
+  /*grid-row: span 18;*/
+}
+
+.grid-row-span-1 {
+  grid-row: span 1;
+}
+
+.grid-row-span-5 {
+  grid-row: span 5;
+}
+
+.grid-row-span-16 {
+  grid-row: span 16;
+}
+
+.grid-row-span-greattastes {
+  grid-row: span 9;
+}
+
+.img-padding-btm {
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,6 +84,10 @@
     width: 82%;
     max-width: 1175px;
     padding: 130px 15px 50px;
+  }
+
+  .img-padding-btm {
+    padding-bottom: 30px;
   }
 
 }
