@@ -18,11 +18,12 @@
           <a class="page-scroll hvr-underline-from-center about" href="/#about">about</a>
         </li>
         <li>
-          <a class="page-scroll hvr-underline-from-center web-portfolio" href="/#portfolio">webPortfolio</a>
-        </li>
-        <li>
           <a class="page-scroll hvr-underline-from-center design-portfolio" href="/#portfolio-design">designPortfolio</a>
         </li>
+        <li>
+          <a class="page-scroll hvr-underline-from-center web-portfolio" href="/#portfolio">codePortfolio</a>
+        </li>
+
         <li>
           <a class="page-scroll hvr-underline-from-center contact-me" href="/#contact-me">contact</a>
         </li>

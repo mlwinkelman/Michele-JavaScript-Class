@@ -25,6 +25,7 @@ import fpSurvivalGuide from './pages/fpSurvivalGuide';
 import offshore from './pages/offshore';
 import dametris from './pages/dametris';
 import greatTastes from './pages/greatTastes';
+import logoWork from './pages/logoWork';
 // import multimediaController from './pages/multimedia';
 
 // on document load
@@ -113,6 +114,12 @@ $(function(){
     break;
   case '/pages/greatTastes.html':
     greatTastes.init();
+    // change nav to gray when background-color is white
+    $('.navbar-custom .nav li a').css('color', '#555555');
+    $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
+    break;
+  case '/pages/logoWork.html':
+    logoWork.init();
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
     $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
