@@ -29,12 +29,34 @@
   padding: 2px 0;
 }
 
+.portfolio-item-wrapper ul.project-nav {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 13px 0 0;
+  padding: 11px 0;
+  text-align: justify;
+  height: 45px;
+}
+
+.portfolio-item-wrapper ul.project-nav:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.portfolio-item-wrapper ul.first {
+  text-align: right;
+}
+
+.portfolio-item-wrapper ul.last {
+  text-align: left;
+}
+
 .portfolio-item-wrapper ul li {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   /*letter-spacing: .25px;*/
   list-style: none;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 22px;
   text-transform: uppercase;
   color: rgba(0,0,0,0.5) !important;
@@ -60,15 +82,15 @@
 }
 
 .grid-row-span-5 {
-  grid-row: span 5;
+  grid-row: span 6;
 }
 
 .grid-row-span-16 {
-  grid-row: span 16;
+  grid-row: span 17;
 }
 
 .grid-row-span-greattastes {
-  grid-row: span 9;
+  grid-row: span 10;
 }
 
 .img-padding-btm {
@@ -118,11 +140,23 @@ a.button {
 }
 
 .portfolio-item-info a:focus, .portfolio-item-info a:hover {
-    color: #6D868D;
+  color: #6D868D;
+}
+
+a.previous-next-link {
+  color: rgba(0,0,0,0.5);
+}
+
+.project-nav a:focus, .project-nav a:hover {
+  color: #8E8E38;
 }
 
 .project-tech {
   font-size: 12px;
+}
+
+.fa-lg {
+  vertical-align: -8%;
 }
 
 #loadOverlay{
