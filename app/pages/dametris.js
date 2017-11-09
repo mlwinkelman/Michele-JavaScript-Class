@@ -13,6 +13,10 @@ var app = {
       // $('#output').addClass('ready');
     }).css({display:'block'});
 
+    // Project Site Button toggles to read "Coming Soon" when clicked (to be removed when project site is live)
+    $('.button').click(function() {
+      $('.click-button').toggle();
+    });
   }
 };
 
