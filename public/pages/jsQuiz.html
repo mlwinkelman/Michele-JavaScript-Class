@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="/dist/app.css" />
     <script src="/dist/modernizr-custom.js"></script>
   </head>
-  <body>
+  <body class="quiz-body">
     <!-- overlay to hide unstyled html -->
     <div id="loadOverlay" style="background-color:white; position:absolute; top:0px; left:0px; bottom:0px; right:0px; z-index:2000;"></div>
     <div class="preloader">
@@ -34,10 +34,12 @@
       <nav></nav>
 
       <div class="photo-container-quiz">
-        <div class="flex-container container-fluid">
-          <h1>Famous Landmarks Trivia Quiz</h1>
+        <div class="flex-container container-fluid info-box-quiz">
+          <h1>Famous Landmarks Trivia</h1>
+          <p>A quiz built with JavaScript. Click the 'Start Quiz' button to test yourself on these famous landmarks!</p>
           <row class="button-row">
-            <button type="button" class="btn btn-secondary btn-outline col-sm-2"><a class="launch-quiz" href=#>Start Quiz</a></button>
+           <!--  <button type="button" class="btn btn-secondary btn-outline col-sm-2"><a class="launch-quiz" href=#>Start Quiz</a></button> -->
+            <a class="launch-quiz" href=#><button type="button" class="btn btn-secondary btn-outline col-sm-2">Start Quiz</button></a>
             <input type="button" class="btn btn-secondary btn-outline col-sm-2" value="Clear Answers" onClick="window.location.reload()">
             <!-- <input type="button" class="btn btn-secondary btn-outline col-sm-2" value="Clear Answers" onClick="history.go(0)"> -->
           </row>

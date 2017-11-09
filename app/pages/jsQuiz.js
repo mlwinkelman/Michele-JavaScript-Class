@@ -10,7 +10,7 @@ var app = {
       app.render();
     };
     $bgImage.src = '/images/Background-Bridge.jpeg';
-    
+
   },
 
   render: function(){
@@ -59,7 +59,7 @@ var app = {
     // launch quiz when "start quiz" button is clicked
     $(document).on('click', '.launch-quiz', function() {
 
-      // Loop 
+      // Loop
       for ( var i = 0; i < quizQuestions.length; i += 1) { // loop thru each question
         response = prompt(quizQuestions[i][0]); // prompt asks question
         response = response.toLowerCase();
@@ -71,12 +71,12 @@ var app = {
           incorrectAnswers.push(quizQuestions[i][0]);
         }
       }
-      
+
       html = 'You got ' + numberOfCorrectAnswers + ' question(s) right.' + '<br>';
       html += 'You got ' + numberOfIncorrectAnswers + ' question(s) wrong.' + '<br>';
-      html += '<h2>You got these questions right:</h2>';
+      html += '<h2>These are the questions you got right:</h2>';
       html += buildList(correctAnswers);
-      html += '<h2>You got these questions wrong:</h2>';
+      html += '<h2>These are the questions you got wrong:</h2>';
       html += buildList(incorrectAnswers);
 
       // prints the list of correct & incorrect answers to the browser
