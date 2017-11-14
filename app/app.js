@@ -106,7 +106,7 @@ $(function(){
     $('.navbar-custom .nav li a').css('color', '#555555');
     $('.navbar-custom .navbar-brand').css('color', '#8E8E38');
     break;
-  case '/pages/dametris.html':
+  case '/pages/salonWebsite.html':
     dametris.init();
     // change nav to gray when background-color is white
     $('.navbar-custom .nav li a').css('color', '#555555');
